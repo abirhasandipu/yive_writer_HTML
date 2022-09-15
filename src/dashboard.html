@@ -16,7 +16,7 @@
 	</head>
 	<body class="bg-gray-100 overflow-x-hidden laptop:overflow-y-scroll">
 		<div
-			class="w-screen h-auto bg-white px-32 tablet:px-10 py-3 grid grid-cols-4 justify-between items-center shadow-sm"
+			class="w-screen h-auto bg-white px-32 tablet:px-10 wide-mobile:px-5 py-3 grid grid-cols-6 justify-between items-center shadow-sm"
 		>
 			<!-- Logo -->
 			<div class="col-span-1 wide-tablet:col-span-3">
@@ -25,7 +25,7 @@
 
 			<!-- Navigation -->
 			<div
-				class="flex col-span-1 text-gray-700 gap-2 wide-tablet:hidden small-laptop:text-sm"
+				class="flex col-span-3 text-gray-700 gap-2 wide-tablet:hidden small-laptop:text-sm"
 			>
 				<a href="dashboard.html">
 					<div
@@ -89,7 +89,7 @@
 			</div>
 			<!-- Hamburger -->
 			<div
-				class="col-span-1 hidden wide-tablet:flex justify-end"
+				class="col-span-3 hidden wide-tablet:flex justify-end"
 				onclick="menuOn()"
 			>
 				<button class="px-5 py-2">
@@ -168,7 +168,7 @@
 
 		<!--================================== Body container Start =============================-->
 
-		<div class="flex flex-col m-auto w-[90%]">
+		<div class="flex flex-col m-auto w-[90%] wide-mobile:w-[100%]">
 			<!-- Card container Start -->
 			<div class="grid grid-cols-3 text-gray-600">
 				<!-- Card 1 -->
@@ -178,7 +178,9 @@
 					>
 						<div>
 							<h4 class="text-lg font-semibold">Credits</h4>
-							<h2 class="text-3xl mt-2 font-semibold">420,696</h2>
+							<h2 class="text-3xl mt-2 font-semibold wide-mobile:text-2xl">
+								420,696
+							</h2>
 						</div>
 						<div
 							class="bg-white w-16 h-16 flex justify-center items-center rounded-lg"
@@ -199,7 +201,9 @@
 					>
 						<div>
 							<h4 class="text-lg font-semibold">Articles</h4>
-							<h2 class="text-3xl mt-2 font-semibold">34</h2>
+							<h2 class="text-3xl mt-2 font-semibold wide-mobile:text-2xl">
+								34
+							</h2>
 						</div>
 						<div
 							class="bg-white w-16 h-16 flex justify-center items-center rounded-lg"
@@ -219,7 +223,9 @@
 					>
 						<div>
 							<h4 class="text-lg font-semibold">Ticket</h4>
-							<h2 class="text-3xl mt-2 font-semibold">2</h2>
+							<h2 class="text-3xl mt-2 font-semibold wide-mobile:text-2xl">
+								2
+							</h2>
 						</div>
 						<div
 							class="bg-white w-16 h-16 flex justify-center items-center rounded-lg"
@@ -240,11 +246,13 @@
 				<!-- Article Creation form -->
 				<div class="col-span-1 px-8 py-5 small-laptop:col-span-full">
 					<div class="bg-white rounded-lg px-8 py-8">
-						<h2 class="text-xl text-gray-600 font-semibold">
+						<h2 class="text-xl text-gray-600 font-semibold wide-mobile:text-lg">
 							Create New Article
 						</h2>
 						<form class="mt-5 flex flex-col gap-5" action="">
-							<label for="keyword" class="font-semibold text-gray-600"
+							<label
+								for="keyword"
+								class="font-semibold text-gray-600 wide-mobile:text-sm"
 								>Keyword</label
 							>
 							<input
@@ -252,18 +260,20 @@
 								name=""
 								id=""
 								placeholder="Enter keyword or topic of your article"
-								class="ml-5 w-[90%] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-3 py-3"
+								class="mx-5 wide-mobile:mx-2 w-[80%] wide-mobile:w-[100%] border border-gray-300 text-gray-900 text-sm wide-mobile:text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-3 py-3"
 							/>
-							<p class="text-xs ml-5 mt-[-5px] text-gray-500">
+							<p class="text-xs ml-5 wide-mobile:ml-2 mt-[-5px] text-gray-500">
 								Choose how you want your articles
 							</p>
-							<label for="length" class="font-semibold text-gray-600"
+							<label
+								for="length"
+								class="font-semibold text-gray-600 wide-mobile:text-sm"
 								>Length</label
 							>
 
 							<select
-								id="countries"
-								class="ml-5 w-[50%] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-3 py-3"
+								id="length"
+								class="mx-5 wide-mobile:mx-2 w-[50%] wide-mobile:w-[100%] border border-gray-300 text-gray-900 text-sm wide-mobile:text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-3 py-3"
 							>
 								<option selected>Length</option>
 								<option value="400">400</option>
@@ -271,12 +281,14 @@
 								<option value="800">800</option>
 								<option value="1000">1000</option>
 							</select>
-							<p class="text-xs ml-5 mt-[-5px] text-gray-500">
+							<p class="text-xs ml-5 wide-mobile:ml-2 mt-[-5px] text-gray-500">
 								Add a longer topic for better results. Otherwise, add single
 								"English" keyword only
 							</p>
 
-							<label for="" class="font-semibold text-gray-600"
+							<label
+								for=""
+								class="font-semibold text-gray-600 wide-mobile:text-sm"
 								>Rewrite with Spintax</label
 							>
 							<label
@@ -299,7 +311,7 @@
 								value="Generate Article"
 								name=""
 								id=""
-								class="mt-5 w-[40%] py-3 text-white rounded-lg bg-[#3A528D] cursor-pointer hover:bg-[#556daa]"
+								class="mt-5 w-[40%] wide-mobile:w-full wide-mobile:text-sm py-3 text-white rounded-lg bg-[#3A528D] cursor-pointer hover:bg-[#556daa]"
 							/>
 						</form>
 					</div>
@@ -311,11 +323,13 @@
 						class="bg-white rounded-lg w-full px-8 py-8 h-[550px] overflow-y-scroll"
 					>
 						<div class="flex justify-between items-center">
-							<h2 class="text-xl font-semibold text-gray-600">
+							<h2
+								class="text-xl font-semibold text-gray-600 wide-mobile:text-lg"
+							>
 								Recent Articles
 							</h2>
 							<a
-								class="bg-[#3A528D] hover:bg-[#556daa] text-white px-5 py-2 rounded-md"
+								class="bg-[#3A528D] hover:bg-[#556daa] text-white px-5 py-2 rounded-md wide-mobile:text-sm"
 								href="#"
 								>View All</a
 							>

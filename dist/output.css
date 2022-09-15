@@ -611,6 +611,10 @@ video {
   grid-column: span 2 / span 2;
 }
 
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+
 .m-auto {
   margin: auto;
 }
@@ -628,6 +632,11 @@ video {
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
+}
+
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
 }
 
 .ml-2 {
@@ -776,6 +785,14 @@ video {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1337,5 +1354,85 @@ body {
   .tablet\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+}
+
+@media (max-width: 640.98px) {
+  .wide-mobile\:mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .wide-mobile\:my-1 {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .wide-mobile\:ml-1 {
+    margin-left: 0.25rem;
+  }
+
+  .wide-mobile\:ml-2 {
+    margin-left: 0.5rem;
+  }
+
+  .wide-mobile\:h-full {
+    height: 100%;
+  }
+
+  .wide-mobile\:w-\[100\%\] {
+    width: 100%;
+  }
+
+  .wide-mobile\:w-full {
+    width: 100%;
+  }
+
+  .wide-mobile\:w-\[80\%\] {
+    width: 80%;
+  }
+
+  .wide-mobile\:w-\[90\%\] {
+    width: 90%;
+  }
+
+  .wide-mobile\:px-1 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
+  .wide-mobile\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .wide-mobile\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .wide-mobile\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .wide-mobile\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .wide-mobile\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .wide-mobile\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .wide-mobile\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
