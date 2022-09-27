@@ -26,3 +26,53 @@ body {
 	background-color: rgb(203, 203, 203);
 	border-radius: 10em;
 }
+
+/* Mirror dislike button to face the same way */
+
+.mirror {
+	transform: scaleX(-1);
+}
+
+/* Copy alert */
+
+#copybtnalert {
+	position: absolute;
+	font-size: 14px;
+	margin-top: -2.5rem;
+	margin-left: -4rem;
+	background-color: rgb(240, 240, 240);
+	padding: 3px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	border-radius: 1rem;
+	border: 2px solid rgb(205, 205, 205);
+	color: gray;
+	cursor: auto;
+	pointer-events: none;
+	opacity: 0;
+}
+
+.copynotification {
+	animation: opacityOn 3s normal forwards;
+	/* animation-delay: 2s; */
+}
+
+@keyframes opacityOn {
+	0% {
+		opacity: 1;
+	}
+
+	75% {
+		opacity: 0;
+	}
+}
+
+.thumb-down {
+	font-size: 5rem;
+	color: #1f57a6;
+}
+
+/* prevent flex overflowing */
+.flex-00200 {
+	flex: 0 0 200px;
+}

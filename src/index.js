@@ -9,3 +9,17 @@ function menuOff() {
 	navclasslist.remove("right-0");
 	navclasslist.add("right-[-250px]");
 }
+
+function toggleMenu() {
+	const actionMenuClassList = document.getElementById("action-menu").classList;
+	actionMenuClassList.toggle("hidden");
+}
+
+function copyAlert() {
+	const copynotificationclasslist =
+		document.getElementById("copybtnalert").classList;
+	// console.log("dipu");
+	copynotificationclasslist.add("copynotification");
+
+	// copynotificationclasslist.remove("copynotification");
+}
