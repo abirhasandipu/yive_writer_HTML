@@ -17,17 +17,18 @@
 	<body class="bg-gray-100 overflow-x-hidden laptop:overflow-y-scroll">
 		
 		
-		<!-- Modal -->
+		<!-- ONLY Take the model code from here. Main page is not fully responsive in this file. -->
+		<!-- Modal Start -->
 		<div class="absolute h-screen w-screen flex justify-center items-center">
-			<div class="border absolute w-[20%] h-auto bg-white z-20 py-4 px-5 rounded-md">
+			<div class="border absolute w-[25%] laptop:w-[30%] wide-tablet:w-[40%] tablet:w-[50%] wide-mobile:w-[80%] mobile:w-[90%] h-auto bg-white z-20 py-4 px-5 rounded-md">
 				<div class="">
-					<h3 class="text-xl">Feedback</h3>
+					<h3 class="text-xl wide-mobile:text-lg">Feedback</h3>
 					<div class="flex justify-center items-center my-5">
-						<i class="thumb-down mirror fa-solid fa-thumbs-down"></i>
+						<i class="thumb-down wide-mobile:text-5xl mirror fa-solid fa-thumbs-down"></i>
 					</div>
 					<h3 class="text-lg text-gray-600">Help us improve&nbsp;&nbsp;<span class="text-sm text-gray-500">(optional)</span></h3>
 					<div class="my-6 w-full">
-						<ul class="flex flex-wrap gap-3">
+						<ul class="flex flex-wrap gap-3 wide-mobile:text-sm">
 							<li class="">
 								<input type="checkbox" id="not-accurate" value="" class="hidden peer" required="">
 								<label for="not-accurate" class="inline-flex justify-between items-center px-2 py-1 w-fit text-gray-500 bg-gray-50 rounded-lg border-2 border-gray-200 cursor-pointer  peer-checked:border-blue-600 hover:text-gray-700 peer-checked:text-gray-600 hover:bg-gray-100 ">                           
@@ -84,12 +85,13 @@
 					
 					<div class="w-full flex justify-between text-sm my-5 gap-3">
 						<button class="w-[50%] bg-white border py-2 text-gray-500 rounded-md hover:bg-gray-50 active:bg-gray-100 ease-in-out duration-200">Skip</button>
-						<input class="w-[50%] bg-[#1F57A6]  py-2 text-white rounded-md cursor-pointer hover:bg-[#285fac] active:bg-[#3f74bd] ease-in-out duration-200" type="submit" name="" id="">
+						<input class="w-[50%] bg-[#1F57A6] py-2 text-white rounded-md cursor-pointer hover:bg-[#285fac] active:bg-[#3f74bd] ease-in-out duration-200" type="submit" name="" id="">
 					</div>
 				</div>
 			</div>	
 		</div>
 		
+		<!-- Modal End -->
 
 		<div
 			class="blur w-screen h-auto bg-white px-32 tablet:px-10 wide-mobile:px-5 py-3 grid grid-cols-6 justify-between items-center drop-shadow-sm"
@@ -254,7 +256,7 @@
 					>
 
 					<!-- buttons -->
-					<div class="flex justify-between items-center gap-10">
+					<div class="flex justify-between items-center flex-wrap gap-10">
 						<!-- like - dislike -->
 						<div class="flex justify-between border border-gray-100 rounded-md">
 							<button
