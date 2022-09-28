@@ -21,5 +21,6 @@ function copyAlert() {
 	// console.log("dipu");
 	copynotificationclasslist.add("copynotification");
 
+	// need to add a delay here
 	// copynotificationclasslist.remove("copynotification");
 }
