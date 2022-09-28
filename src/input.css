@@ -10,7 +10,7 @@ body {
 
 /* Scrollbar */
 #article-list::-webkit-scrollbar {
-	width: 0.8em;
+	width: 0.5em;
 }
 
 #article-list::-webkit-scrollbar-track {

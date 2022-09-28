@@ -177,18 +177,18 @@
 						class="flex justify-between items-center rounded-lg col-span-1 border-l-4 border-[#89C68C] mx-10 mt-5 bg-[#DEECDF] px-8 py-5"
 					>
 						<div>
-							<h4 class="text-lg font-semibold">Credits</h4>
-							<h2 class="text-3xl mt-2 font-semibold wide-mobile:text-2xl">
+							<h4 class="text-lg font-semibold laptop:text-base">Credits</h4>
+							<h2 class="text-2xl mt-2 font-semibold laptop:text-xl">
 								420,696
 							</h2>
 						</div>
 						<div
-							class="bg-white w-16 h-16 flex justify-center items-center rounded-lg"
+							class="bg-white w-14 h-14 flex justify-center items-center rounded-lg"
 						>
 							<div
-								class="border-4 border-[#89C68C] rounded-full w-12 h-12 flex items-center justify-center"
+								class="border-4 border-[#89C68C] rounded-full w-10 h-10 flex items-center justify-center"
 							>
-								<i class="text-[#89C68C] text-3xl fa-solid fa-dollar-sign"></i>
+								<i class="text-[#89C68C] text-xl fa-solid fa-dollar-sign"></i>
 							</div>
 						</div>
 					</div>
@@ -200,18 +200,16 @@
 						class="flex justify-between items-center rounded-lg col-span-1 border-l-4 border-[#EDCD9F] mx-10 mt-5 bg-[#FEEED7] px-8 py-5"
 					>
 						<div>
-							<h4 class="text-lg font-semibold">Articles</h4>
-							<h2 class="text-3xl mt-2 font-semibold wide-mobile:text-2xl">
-								34
-							</h2>
+							<h4 class="text-lg font-semibold laptop:text-base">Articles</h4>
+							<h2 class="text-2xl mt-2 font-semibold laptop:text-xl">34</h2>
 						</div>
 						<div
-							class="bg-white w-16 h-16 flex justify-center items-center rounded-lg"
+							class="bg-white w-14 h-14 flex justify-center items-center rounded-lg"
 						>
 							<div
-								class="border-4 border-[#EDCD9F] rounded-full w-12 h-12 flex items-center justify-center"
+								class="border-4 border-[#EDCD9F] rounded-full w-10 h-10 flex items-center justify-center"
 							>
-								<i class="text-3xl text-[#EDCD9F] fa-regular fa-file-lines"></i>
+								<i class="text-xl text-[#EDCD9F] fa-regular fa-file-lines"></i>
 							</div>
 						</div>
 					</div>
@@ -222,17 +220,15 @@
 						class="flex justify-between items-center rounded-lg col-span-1 border-l-4 border-[#9DBEDC] mx-10 mt-5 bg-[#E1EEFA] px-8 py-5"
 					>
 						<div>
-							<h4 class="text-lg font-semibold">Ticket</h4>
-							<h2 class="text-3xl mt-2 font-semibold wide-mobile:text-2xl">
-								2
-							</h2>
+							<h4 class="text-lg font-semibold laptop:text-base">Ticket</h4>
+							<h2 class="text-2xl mt-2 font-semibold laptop:text-xl">2</h2>
 						</div>
 						<div
-							class="bg-white w-16 h-16 flex justify-center items-center rounded-lg"
+							class="bg-white w-14 h-14 flex justify-center items-center rounded-lg"
 						>
 							<div class="w-12 h-12 flex items-center justify-center">
 								<i
-									class="text-[#9DBEDC] text-5xl fa-regular fa-circle-check"
+									class="text-[#9DBEDC] text-4xl fa-regular fa-circle-check"
 								></i>
 							</div>
 						</div>
@@ -247,11 +243,13 @@
 				<div
 					class="col-span-1 px-8 py-5 small-laptop:col-span-full drop-shadow-md"
 				>
+					<h2
+						class="py-4 text-xl text-gray-600 font-semibold wide-mobile:text-lg"
+					>
+						Create New Article
+					</h2>
 					<div class="bg-white rounded-lg px-8 py-8">
-						<h2 class="text-xl text-gray-600 font-semibold wide-mobile:text-lg">
-							Create New Article
-						</h2>
-						<form class="mt-5 flex flex-col gap-5" action="">
+						<form class="flex flex-col gap-5" action="">
 							<label
 								for="keyword"
 								class="font-semibold text-gray-600 wide-mobile:text-sm"
@@ -313,38 +311,39 @@
 								value="Generate Article"
 								name=""
 								id=""
-								class="mt-5 w-[40%] wide-mobile:w-full wide-mobile:text-sm py-3 text-white rounded-lg bg-[#3A528D] cursor-pointer hover:bg-[#556daa]"
+								class="mt-5 w-[40%] wide-mobile:w-full wide-mobile:text-sm py-3 text-white rounded-lg bg-[#3A528D] cursor-pointer hover:bg-[#556daa] active:active:bg-[#6c85c3]"
 							/>
 						</form>
 					</div>
 				</div>
 				<!-- Article list -->
 				<div
-					class="col-span-1 px-8 py-5 small-laptop:col-span-full drop-shadow-md"
+					class="col-span-1 px-8 py-5 small-laptop:col-span-full drop-shadow-md flex flex-col"
 				>
+					<div class="flex justify-between py-3 items-center">
+						<h2 class="text-xl font-semibold text-gray-600 wide-mobile:text-lg">
+							Recent Articles
+						</h2>
+						<a
+							class="bg-[#3A528D] hover:bg-[#556daa] active:bg-[#6c85c3] text-white px-5 py-2 rounded-md text-sm"
+							href="#"
+							>View All</a
+						>
+					</div>
 					<div
 						id="article-list"
-						class="bg-white rounded-lg w-full px-8 py-8 h-[550px] overflow-y-scroll"
+						class="bg-white h-10 rounded-lg w-full px-8 py-8 grow overflow-y-scroll small-laptop:h-auto"
 					>
-						<div class="flex justify-between items-center">
-							<h2
-								class="text-xl font-semibold text-gray-600 wide-mobile:text-lg"
-							>
-								Recent Articles
-							</h2>
-							<a
-								class="bg-[#3A528D] hover:bg-[#556daa] text-white px-5 py-2 rounded-md wide-mobile:text-sm"
-								href="#"
-								>View All</a
-							>
-						</div>
 						<div class="w-full text-gray-600">
 							<!-- item 1 -->
 							<div
 								class="bg-gray-50 px-5 py-3 rounded-lg my-3 border-l-2 drop-shadow-sm"
 							>
 								<div class="flex justify-between items-center">
-									<h6 class="text-sm font">This is the title of the article</h6>
+									<h6 class="text-sm font">
+										Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+										Harum, expedita?
+									</h6>
 									<div class="flex items-center gap-2">
 										<a
 											href="#"
@@ -361,8 +360,8 @@
 									</div>
 								</div>
 								<div class="py-2">
-									<div class="bg-white h-3 w-full rounded-full">
-										<div class="bg-blue-900 w-[80%] h-3 rounded-full"></div>
+									<div class="bg-white h-2 w-full rounded-full">
+										<div class="bg-blue-900 w-[80%] h-2 rounded-full"></div>
 									</div>
 								</div>
 							</div>
@@ -371,6 +370,38 @@
 								class="bg-gray-50 px-5 py-3 rounded-lg my-3 border-l-2 drop-shadow-sm"
 							>
 								<div class="flex justify-between items-center">
+									<h6 class="text-sm font">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Voluptate, tempora.
+									</h6>
+									<div class="flex items-center gap-2">
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i class="text-xl text-blue-900 fa-solid fa-eye"></i
+										></a>
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i
+												class="text-xl text-blue-900 fa-solid fa-arrow-down"
+											></i
+										></a>
+									</div>
+								</div>
+								<div class="py-1">
+									<!-- <div class="bg-white h-2 w-full rounded-full">
+										<div class="bg-green-500 w-full h-2 rounded-full"></div>
+									</div> -->
+									<p class="text-xs text-gray-400">
+										Created at <span>12:09am 28-09-2022</span>
+									</p>
+								</div>
+							</div>
+							<div
+								class="bg-gray-50 px-5 py-3 rounded-lg my-3 border-l-2 drop-shadow-sm"
+							>
+								<div class="flex justify-between items-center">
 									<h6 class="text-sm font">This is the title of the article</h6>
 									<div class="flex items-center gap-2">
 										<a
@@ -388,8 +419,8 @@
 									</div>
 								</div>
 								<div class="py-2">
-									<div class="bg-white h-3 w-full rounded-full">
-										<div class="bg-green-500 w-full h-3 rounded-full"></div>
+									<div class="bg-white h-2 w-full rounded-full">
+										<div class="bg-blue-900 w-[80%] h-2 rounded-full"></div>
 									</div>
 								</div>
 							</div>
@@ -414,8 +445,8 @@
 									</div>
 								</div>
 								<div class="py-2">
-									<div class="bg-white h-3 w-full rounded-full">
-										<div class="bg-blue-900 w-[80%] h-3 rounded-full"></div>
+									<div class="bg-white h-2 w-full rounded-full">
+										<div class="bg-blue-900 w-[80%] h-2 rounded-full"></div>
 									</div>
 								</div>
 							</div>
@@ -440,8 +471,8 @@
 									</div>
 								</div>
 								<div class="py-2">
-									<div class="bg-white h-3 w-full rounded-full">
-										<div class="bg-blue-900 w-[80%] h-3 rounded-full"></div>
+									<div class="bg-white h-2 w-full rounded-full">
+										<div class="bg-blue-900 w-[80%] h-2 rounded-full"></div>
 									</div>
 								</div>
 							</div>
@@ -466,34 +497,8 @@
 									</div>
 								</div>
 								<div class="py-2">
-									<div class="bg-white w-full rounded-full">
-										<div class="bg-blue-900 w-[80%] h-3 rounded-full"></div>
-									</div>
-								</div>
-							</div>
-							<div
-								class="bg-gray-50 px-5 py-3 rounded-lg my-3 border-l-2 drop-shadow-sm"
-							>
-								<div class="flex justify-between items-center">
-									<h6 class="text-sm font">This is the title of the article</h6>
-									<div class="flex items-center gap-2">
-										<a
-											href="#"
-											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
-											><i class="text-xl text-blue-900 fa-solid fa-eye"></i
-										></a>
-										<a
-											href="#"
-											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
-											><i
-												class="text-xl text-blue-900 fa-solid fa-arrow-down"
-											></i
-										></a>
-									</div>
-								</div>
-								<div class="py-2">
-									<div class="bg-white h-3 w-full rounded-full">
-										<div class="bg-blue-900 w-[80%] h-3 rounded-full"></div>
+									<div class="bg-white h-2 w-full rounded-full">
+										<div class="bg-blue-900 w-[80%] h-2 rounded-full"></div>
 									</div>
 								</div>
 							</div>
