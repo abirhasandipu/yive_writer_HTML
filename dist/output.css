@@ -717,20 +717,16 @@ video {
   height: 100vh;
 }
 
-.h-16 {
-  height: 4rem;
-}
-
-.h-6 {
-  height: 1.5rem;
-}
-
-.h-\[550px\] {
-  height: 550px;
+.h-14 {
+  height: 3.5rem;
 }
 
 .h-10 {
   height: 2.5rem;
+}
+
+.h-6 {
+  height: 1.5rem;
 }
 
 .h-2 {
@@ -739,14 +735,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-14 {
-  height: 3.5rem;
-}
-
-.h-80 {
-  height: 20rem;
 }
 
 .w-screen {
@@ -777,8 +765,12 @@ video {
   width: 90%;
 }
 
-.w-16 {
-  width: 4rem;
+.w-14 {
+  width: 3.5rem;
+}
+
+.w-10 {
+  width: 2.5rem;
 }
 
 .w-\[80\%\] {
@@ -801,10 +793,6 @@ video {
   width: 100%;
 }
 
-.w-10 {
-  width: 2.5rem;
-}
-
 .w-\[25\%\] {
   width: 25%;
 }
@@ -817,10 +805,6 @@ video {
 
 .w-56 {
   width: 14rem;
-}
-
-.w-14 {
-  width: 3.5rem;
 }
 
 .grow {
@@ -1047,11 +1031,6 @@ video {
   background-color: rgb(31 87 166 / var(--tw-bg-opacity));
 }
 
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
 .p-2\.5 {
   padding: 0.625rem;
 }
@@ -1105,6 +1084,11 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -1113,11 +1097,6 @@ video {
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 .px-2 {
@@ -1140,11 +1119,6 @@ video {
   padding-right: 1rem;
 }
 
-.py-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
 .pl-5 {
   padding-left: 1.25rem;
 }
@@ -1161,12 +1135,16 @@ video {
   padding-top: 2.5rem;
 }
 
-.text-left {
-  text-align: left;
+.pt-2 {
+  padding-top: 0.5rem;
 }
 
-.text-end {
-  text-align: end;
+.pt-5 {
+  padding-top: 1.25rem;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-xl {
@@ -1189,9 +1167,9 @@ video {
   line-height: 1.75rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-sm {
@@ -1202,11 +1180,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .font-semibold {
@@ -1542,6 +1515,16 @@ body {
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
 }
 
+.active\:active\:bg-\[\#6c85c3\]:active:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(108 133 195 / var(--tw-bg-opacity));
+}
+
+.active\:bg-\[\#6c85c3\]:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(108 133 195 / var(--tw-bg-opacity));
+}
+
 .active\:bg-gray-100:active {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -1555,26 +1538,6 @@ body {
 .active\:bg-gray-200:active {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
-.active\:bg-\[\#6179b7\]:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(97 121 183 / var(--tw-bg-opacity));
-}
-
-.active\:bg-\[\#647dbb\]:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(100 125 187 / var(--tw-bg-opacity));
-}
-
-.active\:bg-\[\#6c85c3\]:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(108 133 195 / var(--tw-bg-opacity));
-}
-
-.active\:active\:bg-\[\#6c85c3\]:active:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(108 133 195 / var(--tw-bg-opacity));
 }
 
 .peer:checked ~ .peer-checked\:border-blue-600 {
@@ -1638,11 +1601,6 @@ body {
 
   .laptop\:overflow-y-scroll {
     overflow-y: scroll;
-  }
-
-  .laptop\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 
   .laptop\:text-base {
@@ -1714,10 +1672,6 @@ body {
 }
 
 @media (max-width: 768.98px) {
-  .tablet\:h-auto {
-    height: auto;
-  }
-
   .tablet\:w-\[50\%\] {
     width: 50%;
   }
@@ -1781,11 +1735,6 @@ body {
     padding-right: 1.25rem;
   }
 
-  .wide-mobile\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
   .wide-mobile\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -1805,18 +1754,9 @@ body {
     font-size: 3rem;
     line-height: 1;
   }
-
-  .wide-mobile\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
 }
 
 @media (max-width: 479.98px) {
-  .mobile\:h-auto {
-    height: auto;
-  }
-
   .mobile\:w-\[90\%\] {
     width: 90%;
   }
