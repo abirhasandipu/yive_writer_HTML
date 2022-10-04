@@ -14,8 +14,11 @@
 		/>
 		<script src="index.js"></script>
 	</head>
-	<body class="bg-gray-100 overflow-x-hidden laptop:overflow-y-scroll">
-		<div
+	<body
+		class="bg-gray-100 overflow-x-hidden laptop:overflow-y-scroll flex justify-center"
+	>
+		<div class="flex flex-col items-center">
+			<div
 			class="w-screen h-auto bg-white px-32 tablet:px-10 wide-mobile:px-5 py-3 grid grid-cols-6 justify-between items-center drop-shadow-sm"
 		>
 			<!-- Logo -->
@@ -166,208 +169,1064 @@
 		<!-- Sidebar end -->
 		<!-- Header end -->
 
-		<!--================================== Body container Start =============================-->
-
-		<div class="flex justify-center items-center h-[85vh]">
-			<div class="px-8 py-5 drop-shadow-lg flex flex-col h-full w-[70vw]">
-				<div class="flex justify-between py-3 items-center">
-					<h2 class="text-xl font-semibold text-gray-600 wide-mobile:text-lg">
-						All Articles
-					</h2>
-					<a
-						class="bg-[#3A528D] hover:bg-[#556daa] active:bg-[#6c85c3] text-white px-5 py-2 rounded-md text-sm"
-						href="#"
-						>Create new article</a
+		<!-- Table -->
+		<div class="sm:px-6 w-[80%]">
+			<div class="px-4 md:px-10 py-4 md:py-7">
+				<div class="flex md:flex-col items-center justify-between">
+					<h2
+						tabindex="0"
+						class="focus:outline-none text-base sm:text-xl md:text-2xl lg:text-3xl leading-normal text-gray-800"
 					>
-				</div>
-				<div
-					id="article-list"
-					class="bg-white h-10 rounded-lg w-full px-8 py-8 grow overflow-y-scroll small-laptop:h-auto"
-				>
-					<div class="w-full text-gray-600">
-						<!-- item 1 -->
+						Articles
+					</h2>
+					<div class="flex gap-4">
+						<input
+							class="px-4 rounded-lg"
+							type="text"
+							placeholder="Search..."
+						/>
 						<div
-							class="bg-gray-50 px-5 py-3 rounded-lg my-3 border-l-2 drop-shadow-sm"
+							class="py-3 px-4 flex items-center text-sm font-medium leading-none text-gray-600 bg-gray-200 hover:bg-gray-300 cursor-pointer rounded"
 						>
-							<div class="flex justify-between items-center">
-								<h6 class="text-sm font">
-									Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-									Harum, expedita?
-								</h6>
-								<div class="flex items-center gap-2">
-									<a
-										href="#"
-										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
-										><i class="text-xl text-blue-900 fa-solid fa-eye"></i
-									></a>
-									<a
-										href="#"
-										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
-										><i class="text-xl text-blue-900 fa-solid fa-arrow-down"></i
-									></a>
-								</div>
-							</div>
-							<div class="py-2">
-								<div class="bg-white h-2 w-full rounded-full">
-									<div class="bg-green-500 w-[100%] h-2 rounded-full"></div>
-								</div>
-							</div>
-						</div>
-						<!-- other items -->
-						<div
-							class="bg-gray-50 px-5 py-3 rounded-lg my-3 border-l-2 drop-shadow-sm"
-						>
-							<div class="flex justify-between items-center">
-								<h6 class="text-sm font">
-									<span class="font-semibold">#65464</span>&nbsp;&nbsp;Lorem
-									ipsum dolor sit amet consectetur adipisicing elit. Voluptate,
-									tempora.
-								</h6>
-								<div class="flex items-center gap-2">
-									<a
-										href="#"
-										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
-										><i class="text-xl text-blue-900 fa-solid fa-eye"></i
-									></a>
-									<a
-										href="#"
-										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
-										><i class="text-xl text-blue-900 fa-solid fa-arrow-down"></i
-									></a>
-								</div>
-							</div>
-							<div class="py-1">
-								<!-- <div class="bg-white h-2 w-full rounded-full">
-										<div class="bg-green-500 w-full h-2 rounded-full"></div>
-									</div> -->
-								<div class="flex gap-5">
-									<p class="text-xs font-light text-gray-400">
-										Keyword<span class="font-semibold"
-											>&nbsp;&nbsp;Lorem ipsum</span
-										>
-									</p>
-									<p class="text-xs font-light text-gray-400">
-										Created at<span class="font-semibold"
-											>&nbsp;&nbsp;12:09am 28-09-2022</span
-										>
-									</p>
-									<p class="text-xs font-light text-gray-400">
-										Tries<span class="font-semibold">&nbsp;&nbsp;3</span>
-									</p>
-									<p class="text-xs font-light text-gray-400">
-										Length<span class="font-semibold"
-											>&nbsp;&nbsp;Very Long</span
-										>
-									</p>
-									<p class="text-xs font-light text-gray-400">
-										Processing time
-										<span class="font-semibold">&nbsp;&nbsp;257.8ms</span>
-									</p>
-								</div>
-							</div>
-						</div>
-						<div
-							class="bg-gray-50 px-5 py-3 rounded-lg my-3 border-l-2 drop-shadow-sm"
-						>
-							<div class="flex justify-between items-center">
-								<h6 class="text-sm font">This is the title of the article</h6>
-								<div class="flex items-center gap-2">
-									<a
-										href="#"
-										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
-										><i class="text-xl text-blue-900 fa-solid fa-eye"></i
-									></a>
-									<a
-										href="#"
-										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
-										><i class="text-xl text-blue-900 fa-solid fa-arrow-down"></i
-									></a>
-								</div>
-							</div>
-							<div class="py-2">
-								<div class="bg-white h-2 w-full rounded-full">
-									<div class="bg-blue-900 w-[80%] h-2 rounded-full"></div>
-								</div>
-							</div>
-						</div>
-						<div
-							class="bg-gray-50 px-5 py-3 rounded-lg my-3 border-l-2 drop-shadow-sm"
-						>
-							<div class="flex justify-between items-center">
-								<h6 class="text-sm font">This is the title of the article</h6>
-								<div class="flex items-center gap-2">
-									<a
-										href="#"
-										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
-										><i class="text-xl text-blue-900 fa-solid fa-eye"></i
-									></a>
-									<a
-										href="#"
-										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
-										><i class="text-xl text-blue-900 fa-solid fa-arrow-down"></i
-									></a>
-								</div>
-							</div>
-							<div class="py-2">
-								<div class="bg-white h-2 w-full rounded-full">
-									<div class="bg-blue-900 w-[50%] h-2 rounded-full"></div>
-								</div>
-							</div>
-						</div>
-						<div
-							class="bg-gray-50 px-5 py-3 rounded-lg my-3 border-l-2 drop-shadow-sm"
-						>
-							<div class="flex justify-between items-center">
-								<h6 class="text-sm font">This is the title of the article</h6>
-								<div class="flex items-center gap-2">
-									<a
-										href="#"
-										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
-										><i class="text-xl text-blue-900 fa-solid fa-eye"></i
-									></a>
-									<a
-										href="#"
-										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
-										><i class="text-xl text-blue-900 fa-solid fa-arrow-down"></i
-									></a>
-								</div>
-							</div>
-							<div class="py-2">
-								<div class="bg-white h-2 w-full rounded-full">
-									<div class="bg-blue-900 w-[5%] h-2 rounded-full"></div>
-								</div>
-							</div>
-						</div>
-						<div
-							class="bg-gray-50 px-5 py-3 rounded-lg my-3 border-l-2 drop-shadow-sm"
-						>
-							<div class="flex justify-between items-center">
-								<h6 class="text-sm font">This is the title of the article</h6>
-								<div class="flex items-center gap-2">
-									<a
-										href="#"
-										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
-										><i class="text-xl text-blue-900 fa-solid fa-eye"></i
-									></a>
-									<a
-										href="#"
-										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
-										><i class="text-xl text-blue-900 fa-solid fa-arrow-down"></i
-									></a>
-								</div>
-							</div>
-							<div class="py-2">
-								<div class="bg-white h-2 w-full rounded-full">
-									<div class="bg-blue-900 w-[95%] h-2 rounded-full"></div>
-								</div>
-							</div>
+							<p>Status:</p>
+							<select
+								aria-label="select"
+								class="focus:text-indigo-600 focus:outline-none bg-transparent ml-1"
+							>
+								<option class="text-sm text-indigo-800">New</option>
+								<option class="text-sm text-indigo-800">On Queue</option>
+								<option class="text-sm text-indigo-800">Processing</option>
+								<option class="text-sm text-indigo-800">Sucess</option>
+								<option class="text-sm text-indigo-800">Failed</option>
+							</select>
 						</div>
 					</div>
-					<!-- Article list end -->
+				</div>
+			</div>
+			<div class="bg-white py-4 md:py-7 px-4 md:px-8 xl:px-10">
+				<div class="flex items-center justify-between">
+					<div class="flex items-center">
+						<a
+							class="rounded-lg focus:outline-none focus:ring-2 focus:bg-indigo-50 focus:ring-indigo-800"
+							href=" javascript:void(0)"
+						>
+							<div class="py-2 px-5 bg-indigo-100 text-indigo-700 rounded-lg">
+								<p>All</p>
+							</div>
+						</a>
+						<a
+							class="rounded-lg focus:outline-none focus:ring-2 focus:bg-indigo-50 focus:ring-indigo-800 ml-4 sm:ml-8"
+							href="javascript:void(0)"
+						>
+							<div
+								class="py-2 px-5 text-gray-600 hover:text-indigo-700 hover:bg-indigo-100 rounded-lg"
+							>
+								<p>My articles</p>
+							</div>
+						</a>
+						<a
+							class="rounded-lg focus:outline-none focus:ring-2 focus:bg-indigo-50 focus:ring-indigo-800 ml-4 sm:ml-8"
+							href="javascript:void(0)"
+						>
+							<div
+								class="py-2 px-5 text-gray-600 hover:text-indigo-700 hover:bg-indigo-100 rounded-lg"
+							>
+								<p>User Articles</p>
+							</div>
+						</a>
+					</div>
+					<button
+						onclick="popuphandler(true)"
+						class="bg-[#3A528D] hover:bg-[#556daa] active:bg-[#6c85c3] text-white px-5 py-3 rounded-lg text-sm"
+					>
+						<p class="text-sm font-medium leading-none text-white">
+							<i class="fa-solid fa-plus"></i> Create New
+						</p>
+					</button>
+				</div>
+				<div class="mt-7 overflow-x-auto">
+					<table class="w-full whitespace-nowrap">
+						<tbody>
+							<!-- Table header -->
+							<tr
+								tabindex="0"
+								class="focus:outline-none h-16 border border-gray-100 bg-gray-50"
+							>
+								<th>
+									<div class="ml-5">
+										<p class="text-sm leading-none text-gray-600 font-semibold">
+											ID
+											<i class="text-xs fa-solid fa-caret-down"></i>
+										</p>
+									</div>
+								</th>
+								<th class="">
+									<div class="flex items-center pl-5">
+										<p
+											href="#"
+											class="text-sm leading-none text-gray-600 font-semibold"
+										>
+											Keyword
+											<i class="text-xs fa-solid fa-caret-down"></i>
+										</p>
+									</div>
+								</th>
+								<th class="pl-24">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 font-semibold">
+											Status
+											<i class="text-xs fa-solid fa-caret-down"></i>
+										</p>
+									</div>
+								</th>
+								<th class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 font-semibold">
+											User
+											<i class="text-xs fa-solid fa-caret-down"></i>
+										</p>
+									</div>
+								</th>
+								<th class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 font-semibold">
+											Tries
+										</p>
+									</div>
+								</th>
+								<th class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 font-semibold">
+											Length
+											<i class="text-xs fa-solid fa-caret-down"></i>
+										</p>
+									</div>
+								</th>
+								<th class="pl-5">
+									<p class="text-sm leading-none text-gray-600 font-semibold">
+										Rewrite
+										<i class="text-xs fa-solid fa-caret-down"></i>
+									</p>
+								</th>
+								<th class="pl-5">
+									<p class="text-sm leading-none text-gray-600 font-semibold">
+										Processing
+										<i class="text-xs fa-solid fa-caret-down"></i>
+									</p>
+								</th>
+								<th class="pl-5">
+									<p class="text-sm leading-none text-gray-600 font-semibold">
+										Updated at
+										<i class="text-xs fa-solid fa-caret-down"></i>
+									</p>
+								</th>
+
+								<th class="pl-4">
+									<p class="text-sm leading-none text-gray-600 font-semibold">
+										Actions
+									</p>
+								</th>
+							</tr>
+							<tr class="h-3"></tr>
+							<tr
+								tabindex="0"
+								class="focus:outline-none h-16 border border-gray-100 hover:bg-[#f7f7f762]"
+							>
+								<td>
+									<div class="ml-5">
+										<p class="text-sm">64654</p>
+									</div>
+								</td>
+								<td class="focus:text-indigo-600">
+									<div class="flex items-center pl-5">
+										<p class="text-sm leading-none text-blue-700 mr-2">
+											How to find the best smartphone in 202...
+										</p>
+									</div>
+								</td>
+								<td class="pl-24">
+									<div class="flex items-center">
+										<p
+											class="text-xs leading-none text-green-600 ml-2 px-2 py-1 rounded-lg bg-green-100"
+										>
+											Success
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<a href="#" class="text-sm leading-none text-blue-600 ml-2"
+											>Abir</a
+										>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">20</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											Very long
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center justify-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											Yes
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											498.8s
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											47 years ago
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center justify-center gap-2">
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i class="text-md text-blue-900 fa-solid fa-eye"></i
+										></a>
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i class="text-md text-blue-900 fa-solid fa-clone"></i
+										></a>
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i
+												class="text-md text-blue-900 fa-solid fa-arrow-down"
+											></i
+										></a>
+									</div>
+								</td>
+							</tr>
+							<tr class="h-3"></tr>
+							<tr
+								tabindex="0"
+								class="focus:outline-none h-16 border border-gray-100 rounded hover:bg-[#f7f7f762]"
+							>
+								<td>
+									<div class="ml-5">
+										<p class="text-sm">64657</p>
+									</div>
+								</td>
+								<td class="focus:text-indigo-600">
+									<div class="flex items-center pl-5">
+										<p class="text-sm leading-none text-blue-700 mr-2">
+											Writing a book
+										</p>
+									</div>
+								</td>
+								<td class="pl-24">
+									<div class="flex items-center">
+										<p
+											class="text-xs leading-none text-red-600 ml-2 px-2 py-1 rounded-lg bg-red-100"
+										>
+											Failed
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<a href="#" class="text-sm leading-none text-blue-600 ml-2"
+											>Shifat</a
+										>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">5</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">long</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center justify-center">
+										<p class="text-sm leading-none text-gray-400 ml-2">
+											No
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">98.8s</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											2 months ago
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center justify-center gap-2">
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i class="text-md text-blue-900 fa-solid fa-rotate-right"></i
+										></a>
+										
+									</div>
+								</td>
+							</tr>
+							<tr class="h-3"></tr>
+							<tr
+								tabindex="0"
+								class="focus:outline-none h-16 border border-gray-100 rounded hover:bg-[#f7f7f762]"
+							>
+								<td>
+									<div class="ml-5">
+										<p class="text-sm">647611</p>
+									</div>
+								</td>
+								<td class="focus:text-indigo-600">
+									<div class="flex items-center pl-5">
+										<p class="text-sm leading-none text-blue-700 mr-2">
+											How does YIVEWriter work
+										</p>
+									</div>
+								</td>
+								<td class="pl-24">
+									<div class="flex items-center">
+										<p
+											class="text-xs leading-none text-yellow-600 ml-2 px-2 py-1 rounded-lg bg-yellow-100"
+										>
+											<svg
+												class="inline mr-2 w-4 h-4 text-white animate-spin fill-yellow-600"
+												viewBox="0 0 100 101"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+													fill="currentColor"
+												/>
+												<path
+													d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+													fill="currentFill"
+												/>
+											</svg>
+											Processing
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<a href="#" class="text-sm leading-none text-blue-600 ml-2"
+											>Arif</a
+										>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">8</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											Medium
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center justify-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											Yes
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											418.8s
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											27 minutes ago
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center justify-center gap-2">
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i class="text-md text-blue-900 fa-solid fa-eye"></i
+										></a>
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i class="text-md text-blue-900 fa-solid fa-clone"></i
+										></a>
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i
+												class="text-md text-blue-900 fa-solid fa-arrow-down"
+											></i
+										></a>
+									</div>
+								</td>
+							</tr>
+							<tr class="h-3"></tr>
+							<tr
+								tabindex="0"
+								class="focus:outline-none h-16 border border-gray-100 rounded hover:bg-[#f7f7f762]"
+							>
+								<td>
+									<div class="ml-5">
+										<p class="text-sm">64659</p>
+									</div>
+								</td>
+								<td class="focus:text-indigo-600">
+									<div class="flex items-center pl-5">
+										<p class="text-sm leading-none text-blue-700 mr-2">
+											Depression is a good thing
+										</p>
+									</div>
+								</td>
+								<td class="pl-24">
+									<div class="flex items-center">
+										<p
+											class="text-xs leading-none text-indigo-600 ml-2 px-2 py-1 rounded-lg bg-indigo-100"
+										>
+											New
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<a href="#" class="text-sm leading-none text-blue-600 ml-2"
+											>Faisal</a
+										>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">2</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">Short</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center justify-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											Yes
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											998.8s
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											10 years ago
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center justify-center gap-2">
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i class="text-md text-blue-900 fa-solid fa-eye"></i
+										></a>
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i class="text-md text-blue-900 fa-solid fa-clone"></i
+										></a>
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i
+												class="text-md text-blue-900 fa-solid fa-arrow-down"
+											></i
+										></a>
+									</div>
+								</td>
+							</tr>
+							<tr class="h-3"></tr>
+							<tr
+								tabindex="0"
+								class="focus:outline-none h-16 border border-gray-100 rounded hover:bg-[#f7f7f762]"
+							>
+								<td>
+									<div class="ml-5">
+										<p class="text-sm">8498641</p>
+									</div>
+								</td>
+								<td class="focus:text-indigo-600">
+									<div class="flex items-center pl-5">
+										<a href="#" class="text-sm leading-none text-blue-700 mr-2">
+											I need money to buy a personal rocket to...
+										</a>
+									</div>
+								</td>
+								<td class="pl-24">
+									<div class="flex items-center">
+										<p
+											class="text-xs leading-none text-yellow-600 ml-2 px-2 py-1 rounded-lg bg-yellow-100"
+										>
+											On Queue
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<a href="#" class="text-sm leading-none text-blue-600 ml-2"
+											>Marcus</a
+										>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">6</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											Very short
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center justify-center">
+										<p class="text-sm leading-none text-gray-400 ml-2">
+											No
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											154.5s
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											50 seconds ago
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center justify-center gap-2">
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i class="text-md text-blue-900 fa-solid fa-eye"></i
+										></a>
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i class="text-md text-blue-900 fa-solid fa-clone"></i
+										></a>
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i
+												class="text-md text-blue-900 fa-solid fa-arrow-down"
+											></i
+										></a>
+									</div>
+								</td>
+							</tr>
+							<tr class="h-3"></tr>
+							<tr
+								tabindex="0"
+								class="focus:outline-none h-16 border border-gray-100 hover:bg-[#f7f7f762]"
+							>
+								<td>
+									<div class="ml-5">
+										<p class="text-sm">64654</p>
+									</div>
+								</td>
+								<td class="focus:text-indigo-600">
+									<div class="flex items-center pl-5">
+										<p class="text-sm leading-none text-blue-700 mr-2">
+											How to find the best smartphone in 202...
+										</p>
+									</div>
+								</td>
+								<td class="pl-24">
+									<div class="flex items-center">
+										<p
+											class="text-xs leading-none text-green-600 ml-2 px-2 py-1 rounded-lg bg-green-100"
+										>
+											Success
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<a href="#" class="text-sm leading-none text-blue-600 ml-2"
+											>Abir</a
+										>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">3</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											Very long
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center justify-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											Yes
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											498.8s
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											47 years ago
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center justify-center gap-2">
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i class="text-md text-blue-900 fa-solid fa-eye"></i
+										></a>
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i class="text-md text-blue-900 fa-solid fa-clone"></i
+										></a>
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i
+												class="text-md text-blue-900 fa-solid fa-arrow-down"
+											></i
+										></a>
+									</div>
+								</td>
+							</tr>
+							<tr class="h-3"></tr>
+							<tr
+								tabindex="0"
+								class="focus:outline-none h-16 border border-gray-100 rounded hover:bg-[#f7f7f762]"
+							>
+								<td>
+									<div class="ml-5">
+										<p class="text-sm">64657</p>
+									</div>
+								</td>
+								<td class="focus:text-indigo-600">
+									<div class="flex items-center pl-5">
+										<p class="text-sm leading-none text-blue-700 mr-2">
+											Writing a book
+										</p>
+									</div>
+								</td>
+								<td class="pl-24">
+									<div class="flex items-center">
+										<p
+										class="text-xs leading-none text-green-600 ml-2 px-2 py-1 rounded-lg bg-green-100"
+									>
+										Success
+									</p>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<a href="#" class="text-sm leading-none text-blue-600 ml-2"
+											>Shifat</a
+										>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">5</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">long</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center justify-center">
+										<p class="text-sm leading-none text-gray-400 ml-2">
+											
+											No
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">98.8s</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											2 months ago
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center justify-center gap-2">
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i class="text-md text-blue-900 fa-solid fa-eye"></i
+										></a>
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i class="text-md text-blue-900 fa-solid fa-clone"></i
+										></a>
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i
+												class="text-md text-blue-900 fa-solid fa-arrow-down"
+											></i
+										></a>
+									</div>
+								</td>
+							</tr>
+							<tr class="h-3"></tr>
+							<tr
+								tabindex="0"
+								class="focus:outline-none h-16 border border-gray-100 rounded hover:bg-[#f7f7f762]"
+							>
+								<td>
+									<div class="ml-5">
+										<p class="text-sm">647611</p>
+									</div>
+								</td>
+								<td class="focus:text-indigo-600">
+									<div class="flex items-center pl-5">
+										<p class="text-sm leading-none text-blue-700 mr-2">
+											How does YIVEWriter work
+										</p>
+									</div>
+								</td>
+								<td class="pl-24">
+									<div class="flex items-center">
+										<p
+											class="text-xs leading-none text-yellow-600 ml-2 px-2 py-1 rounded-lg bg-yellow-100"
+										>
+											<svg
+												class="inline mr-2 w-4 h-4 text-white animate-spin fill-yellow-600"
+												viewBox="0 0 100 101"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+													fill="currentColor"
+												/>
+												<path
+													d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+													fill="currentFill"
+												/>
+											</svg>
+											Processing
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<a href="#" class="text-sm leading-none text-blue-600 ml-2"
+											>Arif</a
+										>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">4</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											Medium
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center justify-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											Yes
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											418.8s
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											27 minutes ago
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center justify-center gap-2">
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i class="text-md text-blue-900 fa-solid fa-eye"></i
+										></a>
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i class="text-md text-blue-900 fa-solid fa-clone"></i
+										></a>
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i
+												class="text-md text-blue-900 fa-solid fa-arrow-down"
+											></i
+										></a>
+									</div>
+								</td>
+							</tr>
+							<tr class="h-3"></tr>
+							<tr
+								tabindex="0"
+								class="focus:outline-none h-16 border border-gray-100 rounded hover:bg-[#f7f7f762]"
+							>
+								<td>
+									<div class="ml-5">
+										<p class="text-sm">64659</p>
+									</div>
+								</td>
+								<td class="focus:text-indigo-600">
+									<div class="flex items-center pl-5">
+										<p class="text-sm leading-none text-blue-700 mr-2">
+											Depression is a good thing
+										</p>
+									</div>
+								</td>
+								<td class="pl-24">
+									<div class="flex items-center">
+										<p
+											class="text-xs leading-none text-green-600 ml-2 px-2 py-1 rounded-lg bg-green-100"
+										>
+											Success
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<a href="#" class="text-sm leading-none text-blue-600 ml-2"
+											>Faisal</a
+										>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">4</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">Short</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center justify-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											Yes
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											998.8s
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											10 years ago
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center justify-center gap-2">
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i class="text-md text-blue-900 fa-solid fa-eye"></i
+										></a>
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i class="text-md text-blue-900 fa-solid fa-clone"></i
+										></a>
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i
+												class="text-md text-blue-900 fa-solid fa-arrow-down"
+											></i
+										></a>
+									</div>
+								</td>
+							</tr>
+							<tr class="h-3"></tr>
+							<tr
+								tabindex="0"
+								class="focus:outline-none h-16 border border-gray-100 rounded hover:bg-[#f7f7f762]"
+							>
+								<td>
+									<div class="ml-5">
+										<p class="text-sm">8498641</p>
+									</div>
+								</td>
+								<td class="focus:text-indigo-600">
+									<div class="flex items-center pl-5">
+										<a href="#" class="text-sm leading-none text-blue-700 mr-2">
+											I need money to buy a personal rocket to...
+										</a>
+									</div>
+								</td>
+								<td class="pl-24">
+									<div class="flex items-center">
+										<p
+											class="text-xs leading-none text-green-600 ml-2 px-2 py-1 rounded-lg bg-green-100"
+										>
+											Success
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<a href="#" class="text-sm leading-none text-blue-600 ml-2"
+											>Marcus</a
+										>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">54</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											Very short
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center justify-center">
+										<p class="text-sm leading-none text-gray-500 ml-2">
+											No
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											154.5s
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											50 seconds ago
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center justify-center gap-2">
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i class="text-md text-blue-900 fa-solid fa-eye"></i
+										></a>
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i class="text-md text-blue-900 fa-solid fa-clone"></i
+										></a>
+										<a
+											href="#"
+											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+											><i
+												class="text-md text-blue-900 fa-solid fa-arrow-down"
+											></i
+										></a>
+									</div>
+								</td>
+							</tr>
+							<tr class="h-3"></tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
-
-		<!-- Body container end -->
+		</div>
+		<script src="./index.js"></script>
+		<style>
+			.checkbox:checked + .check-icon {
+				display: flex;
+			}
+		</style>
+		<script></script>
 	</body>
 </html>
