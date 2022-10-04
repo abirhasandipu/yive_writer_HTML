@@ -15,7 +15,7 @@
 		<script src="index.js"></script>
 	</head>
 	<body
-		class="bg-gray-100 overflow-x-hidden laptop:overflow-y-scroll flex justify-center"
+		class="bg-gray-100 overflow-x-hidden laptop:overflow-y-scroll"
 	>
 		<div class="flex flex-col items-center">
 			<div
@@ -170,7 +170,7 @@
 		<!-- Header end -->
 
 		<!-- Table -->
-		<div class="sm:px-6 w-[80%]">
+		<div class="sm:px-6 w-[80%] wide-tablet:w-[95%]">
 			<div class="px-4 md:px-10 py-4 md:py-7">
 				<div class="flex md:flex-col items-center justify-between">
 					<h2
@@ -179,33 +179,31 @@
 					>
 						Articles
 					</h2>
-					<div class="flex gap-4">
+					<div class="flex gap-4 wide-tablet:flex-col items-end">
 						<input
-							class="px-4 rounded-lg"
+							class="px-4 py-3 mobile:py-2 mobile:w-[70%] counded"
 							type="text"
 							placeholder="Search..."
 						/>
-						<div
-							class="py-3 px-4 flex items-center text-sm font-medium leading-none text-gray-600 bg-gray-200 hover:bg-gray-300 cursor-pointer rounded"
-						>
-							<p>Status:</p>
-							<select
-								aria-label="select"
-								class="focus:text-indigo-600 focus:outline-none bg-transparent ml-1"
-							>
-								<option class="text-sm text-indigo-800">New</option>
-								<option class="text-sm text-indigo-800">On Queue</option>
-								<option class="text-sm text-indigo-800">Processing</option>
-								<option class="text-sm text-indigo-800">Sucess</option>
-								<option class="text-sm text-indigo-800">Failed</option>
-							</select>
-						</div>
+						<!-- <div
+							class="mobile:w-[70%] flex-1 py-3 px-4 mobile:py-2 flex items-center text-sm font-medium leading-none text-gray-600 bg-gray-200 hover:bg-gray-300 cursor-pointer rounded"
+						> -->
+						
+						<select id="status" class="mobile:w-[70%] text-gray-600 text-sm rounded bg-white block w-full p-3">
+							<option selected="">Status</option>
+							<option value="success">Success</option>
+							<option value="failed">Failed</option>
+							<option value="onqueue">On Queue</option>
+							<option value="processing">Processing</option>
+						</select>
+
+						<!-- </div> -->
 					</div>
 				</div>
 			</div>
 			<div class="bg-white py-4 md:py-7 px-4 md:px-8 xl:px-10">
-				<div class="flex items-center justify-between">
-					<div class="flex items-center">
+				<div class="flex items-center justify-between tablet:flex-col tablet:items-start tablet:gap-2">
+					<div class="flex items-center mobile:text-sm mobile:flex-wrap">
 						<a
 							class="rounded-lg focus:outline-none focus:ring-2 focus:bg-indigo-50 focus:ring-indigo-800"
 							href=" javascript:void(0)"
@@ -239,7 +237,7 @@
 						onclick="popuphandler(true)"
 						class="bg-[#3A528D] hover:bg-[#556daa] active:bg-[#6c85c3] text-white px-5 py-3 rounded-lg text-sm"
 					>
-						<p class="text-sm font-medium leading-none text-white">
+						<p class="text-sm font-medium leading-none text-white  mobile:text-xs">
 							<i class="fa-solid fa-plus"></i> Create New
 						</p>
 					</button>
@@ -395,7 +393,7 @@
 								</td>
 								<td class="pl-4">
 									<div class="flex items-center justify-center gap-2">
-										<a
+										<a 
 											href="#"
 											class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
 											><i class="text-md text-blue-900 fa-solid fa-eye"></i
@@ -1173,7 +1171,7 @@
 								</td>
 								<td class="pl-5">
 									<div class="flex items-center justify-center">
-										<p class="text-sm leading-none text-gray-500 ml-2">
+										<p class="text-sm leading-none text-gray-400 ml-2">
 											No
 										</p>
 									</div>
