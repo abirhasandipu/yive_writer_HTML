@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/dist/output.css" rel="stylesheet" />
+		<!-- FA CDN -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+			integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<script src="index.js"></script>
+	</head>
+	<body class="bg-gray-100 overflow-x-hidden laptop:overflow-y-scroll">
+		<div
+			class="w-screen h-auto bg-white px-32 tablet:px-10 wide-mobile:px-5 py-3 grid grid-cols-6 justify-between items-center drop-shadow-sm"
+		>
+			<!-- Logo -->
+			<div class="col-span-1 wide-tablet:col-span-3">
+				<img class="w-36" src="assets/YIVEWriter_logo.png" alt="" />
+			</div>
+
+			<!-- Navigation -->
+			<div
+				class="flex col-span-3 text-gray-700 gap-2 wide-tablet:hidden small-laptop:text-sm"
+			>
+				<a href="dashboard.html">
+					<div
+						class="w-32 small-laptop:w-24 active:bg-slate-100 bg-gray-100 px-10 py-1.5 rounded-md flex justify-center items-center gap-2 hover:bg-slate-100 ease-in-out duration-200"
+					>
+						<!-- <i class="fa-solid fa-table-columns"></i> -->
+						<p>Dashboard</p>
+					</div>
+				</a>
+				<a href="profile.html">
+					<div
+						class="w-32 small-laptop:w-24 active:bg-slate-100 px-10 py-1.5 rounded-md flex justify-center items-center gap-2 hover:bg-slate-100 ease-in-out duration-200"
+					>
+						<!-- <i class="fa-solid fa-user"></i> -->
+						<p>History</p>
+					</div>
+				</a>
+				<a href="#">
+					<div
+						class="w-32 active:bg-slate-100 px-10 py-1.5 rounded-md flex justify-center items-center gap-2 hover:bg-slate-100 ease-in-out duration-200"
+					>
+						<!-- <i class="fa-solid fa-ticket"></i> -->
+						<p>Tutorials</p>
+					</div>
+				</a>
+				<a href="#">
+					<div
+						class="w-32 active:bg-slate-100 px-10 py-1.5 rounded-md flex justify-center items-center gap-2 hover:bg-slate-100 ease-in-out duration-200"
+					>
+						<!-- <i class="fa-solid fa-ticket"></i> -->
+						<p>Ticket</p>
+					</div>
+				</a>
+			</div>
+
+			<!-- Profile -->
+			<div
+				class="flex gap-8 justify-end items-center col-span-2 wide-tablet:hidden"
+			>
+				<div
+					class="col-span-1 flex justify-end items-center gap-5 small-laptop:gap-2"
+				>
+					<div
+						class="h-8 w-8 small-laptop:h-6 small-laptop:w-6 rounded-full border-2 border-blue-900 flex justify-center items-center"
+					>
+						<i
+							class="text-blue-900 text-xl small-laptop:text-sm fa-solid fa-dollar-sign"
+						></i>
+					</div>
+					<h3 class="text-gray-800 justify-end small-laptop:text-sm">
+						420,696
+					</h3>
+				</div>
+				<div class="w-12 h-12 small-laptop:w-8 small-laptop:h-8">
+					<img
+						class="rounded-full border-2 border-blue-700"
+						src="assets/avatar.png"
+						alt="profile image"
+					/>
+				</div>
+			</div>
+			<!-- Hamburger -->
+			<div
+				class="col-span-3 hidden wide-tablet:flex justify-end"
+				onclick="menuOn()"
+			>
+				<button class="px-5 py-2">
+					<i class="text-2xl fa-solid fa-bars"></i>
+				</button>
+			</div>
+		</div>
+
+		<!-- Nav sidebar start -->
+		<div
+			class="z-10 wide-tablet:flex fixed top-0 w-60 right-[-250px] h-screen bg-white border drop-shadow-md ease-in-out duration-300"
+			id="nav"
+		>
+			<div class="flex flex-col justify-between text-gray-600">
+				<ul>
+					<li class="pl-5 pt-4">
+						<button onclick="menuOff()">
+							<i class="text-3xl fa-sharp fa-solid fa-xmark"></i>
+						</button>
+					</li>
+					<div
+						class="flex gap-2 pl-3 py-3 justify-start items-center col-span-2 border-b"
+					>
+						<div
+							class="h-8 w-8 rounded-full border-2 border-blue-900 flex justify-center items-center"
+						>
+							<i class="text-blue-900 text-lg fa-solid fa-dollar-sign"></i>
+						</div>
+						<div>
+							<h3 class="text-lg ml-2 text-gray-600 justify-end">420,696</h3>
+						</div>
+					</div>
+					<a href="#"
+						><li
+							class="w-60 px-5 py-3 flex gap-3 items-center hover:bg-slate-50"
+						>
+							<i class="fa-solid fa-table-columns"></i>
+							<p>Dashboard</p>
+						</li></a
+					>
+					<a href="#"
+						><li
+							class="w-60 px-5 py-3 flex gap-3 items-center hover:bg-slate-50"
+						>
+							<i class="fa-solid fa-user"></i>
+							<p>History</p>
+						</li></a
+					>
+					<a href="#"
+						><li
+							class="w-60 px-5 py-3 flex gap-3 items-center hover:bg-slate-50"
+						>
+							<i class="fa-solid fa-ticket"></i>
+							<p>Tutorials</p>
+						</li></a
+					>
+					<a href="#"
+						><li
+							class="w-60 px-5 py-3 flex gap-3 items-center hover:bg-slate-50"
+						>
+							<i class="fa-solid fa-ticket"></i>
+							<p>Ticket</p>
+						</li></a
+					>
+				</ul>
+				<a
+					class="w-60 px-5 py-3 flex gap-3 items-center border-t hover:bg-slate-50"
+				>
+					<i class="fa-solid fa-right-from-bracket"></i>
+					<p>Logout</p>
+				</a>
+			</div>
+		</div>
+		<!-- Sidebar end -->
+		<!-- Header end -->
+
+		<!--================================== Body container Start =============================-->
+
+		<div class="flex justify-center items-center h-[85vh]">
+			<div class="px-8 py-5 drop-shadow-lg flex flex-col h-full w-[70vw]">
+				<div class="flex justify-between py-3 items-center">
+					<h2 class="text-xl font-semibold text-gray-600 wide-mobile:text-lg">
+						All Articles
+					</h2>
+					<a
+						class="bg-[#3A528D] hover:bg-[#556daa] active:bg-[#6c85c3] text-white px-5 py-2 rounded-md text-sm"
+						href="#"
+						>Create new article</a
+					>
+				</div>
+				<div
+					id="article-list"
+					class="bg-white h-10 rounded-lg w-full px-8 py-8 grow overflow-y-scroll small-laptop:h-auto"
+				>
+					<div class="w-full text-gray-600">
+						<!-- item 1 -->
+						<div
+							class="bg-gray-50 px-5 py-3 rounded-lg my-3 border-l-2 drop-shadow-sm"
+						>
+							<div class="flex justify-between items-center">
+								<h6 class="text-sm font">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+									Harum, expedita?
+								</h6>
+								<div class="flex items-center gap-2">
+									<a
+										href="#"
+										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+										><i class="text-xl text-blue-900 fa-solid fa-eye"></i
+									></a>
+									<a
+										href="#"
+										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+										><i class="text-xl text-blue-900 fa-solid fa-arrow-down"></i
+									></a>
+								</div>
+							</div>
+							<div class="py-2">
+								<div class="bg-white h-2 w-full rounded-full">
+									<div class="bg-green-500 w-[100%] h-2 rounded-full"></div>
+								</div>
+							</div>
+						</div>
+						<!-- other items -->
+						<div
+							class="bg-gray-50 px-5 py-3 rounded-lg my-3 border-l-2 drop-shadow-sm"
+						>
+							<div class="flex justify-between items-center">
+								<h6 class="text-sm font">
+									<span class="font-semibold">#65464</span>&nbsp;&nbsp;Lorem
+									ipsum dolor sit amet consectetur adipisicing elit. Voluptate,
+									tempora.
+								</h6>
+								<div class="flex items-center gap-2">
+									<a
+										href="#"
+										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+										><i class="text-xl text-blue-900 fa-solid fa-eye"></i
+									></a>
+									<a
+										href="#"
+										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+										><i class="text-xl text-blue-900 fa-solid fa-arrow-down"></i
+									></a>
+								</div>
+							</div>
+							<div class="py-1">
+								<!-- <div class="bg-white h-2 w-full rounded-full">
+										<div class="bg-green-500 w-full h-2 rounded-full"></div>
+									</div> -->
+								<div class="flex gap-5">
+									<p class="text-xs font-light text-gray-400">
+										Keyword<span class="font-semibold"
+											>&nbsp;&nbsp;Lorem ipsum</span
+										>
+									</p>
+									<p class="text-xs font-light text-gray-400">
+										Created at<span class="font-semibold"
+											>&nbsp;&nbsp;12:09am 28-09-2022</span
+										>
+									</p>
+									<p class="text-xs font-light text-gray-400">
+										Tries<span class="font-semibold">&nbsp;&nbsp;3</span>
+									</p>
+									<p class="text-xs font-light text-gray-400">
+										Length<span class="font-semibold"
+											>&nbsp;&nbsp;Very Long</span
+										>
+									</p>
+									<p class="text-xs font-light text-gray-400">
+										Processing time
+										<span class="font-semibold">&nbsp;&nbsp;257.8ms</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div
+							class="bg-gray-50 px-5 py-3 rounded-lg my-3 border-l-2 drop-shadow-sm"
+						>
+							<div class="flex justify-between items-center">
+								<h6 class="text-sm font">This is the title of the article</h6>
+								<div class="flex items-center gap-2">
+									<a
+										href="#"
+										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+										><i class="text-xl text-blue-900 fa-solid fa-eye"></i
+									></a>
+									<a
+										href="#"
+										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+										><i class="text-xl text-blue-900 fa-solid fa-arrow-down"></i
+									></a>
+								</div>
+							</div>
+							<div class="py-2">
+								<div class="bg-white h-2 w-full rounded-full">
+									<div class="bg-blue-900 w-[80%] h-2 rounded-full"></div>
+								</div>
+							</div>
+						</div>
+						<div
+							class="bg-gray-50 px-5 py-3 rounded-lg my-3 border-l-2 drop-shadow-sm"
+						>
+							<div class="flex justify-between items-center">
+								<h6 class="text-sm font">This is the title of the article</h6>
+								<div class="flex items-center gap-2">
+									<a
+										href="#"
+										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+										><i class="text-xl text-blue-900 fa-solid fa-eye"></i
+									></a>
+									<a
+										href="#"
+										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+										><i class="text-xl text-blue-900 fa-solid fa-arrow-down"></i
+									></a>
+								</div>
+							</div>
+							<div class="py-2">
+								<div class="bg-white h-2 w-full rounded-full">
+									<div class="bg-blue-900 w-[50%] h-2 rounded-full"></div>
+								</div>
+							</div>
+						</div>
+						<div
+							class="bg-gray-50 px-5 py-3 rounded-lg my-3 border-l-2 drop-shadow-sm"
+						>
+							<div class="flex justify-between items-center">
+								<h6 class="text-sm font">This is the title of the article</h6>
+								<div class="flex items-center gap-2">
+									<a
+										href="#"
+										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+										><i class="text-xl text-blue-900 fa-solid fa-eye"></i
+									></a>
+									<a
+										href="#"
+										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+										><i class="text-xl text-blue-900 fa-solid fa-arrow-down"></i
+									></a>
+								</div>
+							</div>
+							<div class="py-2">
+								<div class="bg-white h-2 w-full rounded-full">
+									<div class="bg-blue-900 w-[5%] h-2 rounded-full"></div>
+								</div>
+							</div>
+						</div>
+						<div
+							class="bg-gray-50 px-5 py-3 rounded-lg my-3 border-l-2 drop-shadow-sm"
+						>
+							<div class="flex justify-between items-center">
+								<h6 class="text-sm font">This is the title of the article</h6>
+								<div class="flex items-center gap-2">
+									<a
+										href="#"
+										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+										><i class="text-xl text-blue-900 fa-solid fa-eye"></i
+									></a>
+									<a
+										href="#"
+										class="border border-gray-100 flex items-center justify-center w-10 h-10 px-3 py-2 hover:bg-gray-200 rounded-lg ease-in-out duration-200"
+										><i class="text-xl text-blue-900 fa-solid fa-arrow-down"></i
+									></a>
+								</div>
+							</div>
+							<div class="py-2">
+								<div class="bg-white h-2 w-full rounded-full">
+									<div class="bg-blue-900 w-[95%] h-2 rounded-full"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Article list end -->
+				</div>
+			</div>
+		</div>
+
+		<!-- Body container end -->
+	</body>
+</html>

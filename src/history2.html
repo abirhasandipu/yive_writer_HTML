@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/dist/output.css" rel="stylesheet" />
+		<!-- FA CDN -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+			integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<script src="index.js"></script>
+	</head>
+	<body
+		class="bg-gray-100 overflow-x-hidden laptop:overflow-y-scroll flex justify-center"
+	>
+		<!-- component -->
+		<div class="sm:px-6 w-[80%]">
+			<div class="px-4 md:px-10 py-4 md:py-7">
+				<div class="flex items-center justify-between">
+					<h2
+						tabindex="0"
+						class="focus:outline-none text-base sm:text-xl md:text-2xl lg:text-3xl leading-normal text-gray-800"
+					>
+						Articles
+					</h2>
+					<div class="flex gap-4">
+						<input
+							class="px-4 rounded-lg"
+							type="text"
+							placeholder="Search..."
+						/>
+						<div
+							class="py-3 px-4 flex items-center text-sm font-medium leading-none text-gray-600 bg-gray-200 hover:bg-gray-300 cursor-pointer rounded"
+						>
+							<p>Status:</p>
+							<select
+								aria-label="select"
+								class="focus:text-indigo-600 focus:outline-none bg-transparent ml-1"
+							>
+								<option class="text-sm text-indigo-800">New</option>
+								<option class="text-sm text-indigo-800">On Queue</option>
+								<option class="text-sm text-indigo-800">Processing</option>
+								<option class="text-sm text-indigo-800">Sucess</option>
+								<option class="text-sm text-indigo-800">Failed</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bg-white py-4 md:py-7 px-4 md:px-8 xl:px-10">
+				<div class="flex items-center justify-between">
+					<div class="flex items-center">
+						<a
+							class="rounded-full focus:outline-none focus:ring-2 focus:bg-indigo-50 focus:ring-indigo-800"
+							href=" javascript:void(0)"
+						>
+							<div class="py-2 px-8 bg-indigo-100 text-indigo-700 rounded-lg">
+								<p>All</p>
+							</div>
+						</a>
+						<a
+							class="rounded-full focus:outline-none focus:ring-2 focus:bg-indigo-50 focus:ring-indigo-800 ml-4 sm:ml-8"
+							href="javascript:void(0)"
+						>
+							<div
+								class="py-2 px-8 text-gray-600 hover:text-indigo-700 hover:bg-indigo-100 rounded-lg"
+							>
+								<p>Done</p>
+							</div>
+						</a>
+						<a
+							class="rounded-full focus:outline-none focus:ring-2 focus:bg-indigo-50 focus:ring-indigo-800 ml-4 sm:ml-8"
+							href="javascript:void(0)"
+						>
+							<div
+								class="py-2 px-8 text-gray-600 hover:text-indigo-700 hover:bg-indigo-100 rounded-lg"
+							>
+								<p>Pending</p>
+							</div>
+						</a>
+					</div>
+					<button
+						onclick="popuphandler(true)"
+						class="bg-[#3A528D] hover:bg-[#556daa] active:bg-[#6c85c3] text-white px-5 py-3 rounded-md text-sm"
+					>
+						<p class="text-sm font-medium leading-none text-white">
+							Create New
+						</p>
+					</button>
+				</div>
+				<div class="mt-7 overflow-x-auto">
+					<table class="w-full whitespace-nowrap">
+						<tbody>
+							<!-- Table header -->
+							<tr
+								tabindex="0"
+								class="focus:outline-none h-16 border border-gray-100 rounded bg-gray-50"
+							>
+								<th>
+									<div class="ml-5">
+										<p
+											class="text-sm leading-none text-gray-600 ml-2 font-semibold"
+										>
+											ID
+										</p>
+									</div>
+								</th>
+								<th class="">
+									<div class="flex items-center pl-5">
+										<p
+											href="#"
+											class="text-sm leading-none text-gray-600 ml-2 font-semibold"
+										>
+											Keyword
+											<i class="text-xs fa-solid fa-caret-down"></i>
+										</p>
+									</div>
+								</th>
+								<th class="pl-24">
+									<div class="flex items-center">
+										<p
+											class="text-sm leading-none text-gray-600 ml-2 font-semibold"
+										>
+											Status
+											<i class="text-xs fa-solid fa-caret-down"></i>
+										</p>
+									</div>
+								</th>
+								<th class="pl-5">
+									<div class="flex items-center">
+										<p
+											class="text-sm leading-none text-gray-600 ml-2 font-semibold"
+										>
+											User
+											<i class="text-xs fa-solid fa-caret-down"></i>
+										</p>
+									</div>
+								</th>
+								<th class="pl-5">
+									<div class="flex items-center">
+										<p
+											class="text-sm leading-none text-gray-600 ml-2 font-semibold"
+										>
+											Tries
+										</p>
+									</div>
+								</th>
+								<th class="pl-5">
+									<div class="flex items-center">
+										<p
+											class="text-sm leading-none text-gray-600 ml-2 font-semibold"
+										>
+											Length
+											<i class="text-xs fa-solid fa-caret-down"></i>
+										</p>
+									</div>
+								</th>
+								<th class="pl-5">
+									<p
+										class="text-sm leading-none text-gray-600 ml-2 font-semibold"
+									>
+										Rewrite
+										<i class="text-xs fa-solid fa-caret-down"></i>
+									</p>
+								</th>
+								<th class="pl-5">
+									<p
+										class="text-sm leading-none text-gray-600 ml-2 font-semibold"
+									>
+										Processing
+										<i class="text-xs fa-solid fa-caret-down"></i>
+									</p>
+								</th>
+								<th class="pl-5">
+									<p
+										class="text-sm leading-none text-gray-600 ml-2 font-semibold"
+									>
+										Updated at
+										<i class="text-xs fa-solid fa-caret-down"></i>
+									</p>
+								</th>
+
+								<th class="pl-4">
+									<p
+										class="text-sm leading-none text-gray-600 ml-2 font-semibold"
+									>
+										Actions
+									</p>
+								</th>
+							</tr>
+							<tr class="h-3"></tr>
+							<tr
+								tabindex="0"
+								class="focus:outline-none h-16 border border-gray-100 rounded"
+							>
+								<td>
+									<div class="ml-5">
+										<p>64654</p>
+									</div>
+								</td>
+								<td class="focus:text-indigo-600">
+									<div class="flex items-center pl-5">
+										<p class="text-sm leading-none text-gray-700 mr-2">
+											How to find the best smartphone
+										</p>
+									</div>
+								</td>
+								<td class="pl-24">
+									<div class="flex items-center">
+										<p
+											class="text-xs leading-none text-green-600 ml-2 px-2 py-1 rounded-lg bg-green-100"
+										>
+											Success
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<a href="#" class="text-sm leading-none text-blue-600 ml-2"
+											>Abir</a
+										>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">20</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											Very long
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center justify-center">
+										<p class="text-lg leading-none text-green-400 ml-2">
+											<i class="fa-solid fa-circle-check"></i>
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											498.8ms
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											10 years ago
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<button
+										class="py-2 px-3 text-sm leading-none text-white bg-indigo-400 rounded focus:outline-none"
+									>
+										<!-- <i class="text-xs fa-sharp fa-solid fa-eye"></i>-->
+										Preview
+									</button>
+									<button
+										class="py-2 px-3 text-sm leading-none text-white bg-green-400 rounded focus:outline-none"
+									>
+										Download
+									</button>
+								</td>
+							</tr>
+							<tr class="h-3"></tr>
+							<tr
+								tabindex="0"
+								class="focus:outline-none h-16 border border-gray-100 rounded"
+							>
+								<td>
+									<div class="ml-5">
+										<p>64654</p>
+									</div>
+								</td>
+								<td class="focus:text-indigo-600">
+									<div class="flex items-center pl-5">
+										<p class="text-sm leading-none text-gray-700 mr-2">
+											Writing a book
+										</p>
+									</div>
+								</td>
+								<td class="pl-24">
+									<div class="flex items-center">
+										<p
+											class="text-xs leading-none text-red-600 ml-2 px-2 py-1 rounded-lg bg-red-100"
+										>
+											Failed
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<a href="#" class="text-sm leading-none text-blue-600 ml-2"
+											>Shifat</a
+										>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">5</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">long</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center justify-center">
+										<p class="text-lg leading-none text-red-500 ml-2">
+											<i class="fa-solid fa-circle-xmark"></i>
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											98.8ms
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											2 months ago
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<button
+										class="py-2 px-3 text-sm leading-none text-white bg-indigo-400 rounded focus:outline-none"
+									>
+										Preview
+									</button>
+									<button
+										class="py-2 px-3 text-sm leading-none text-white bg-green-400 rounded focus:outline-none"
+									>
+										Download
+									</button>
+								</td>
+							</tr>
+							<tr class="h-3"></tr>
+							<tr
+								tabindex="0"
+								class="focus:outline-none h-16 border border-gray-100 rounded"
+							>
+								<td>
+									<div class="ml-5">
+										<p>647654</p>
+									</div>
+								</td>
+								<td class="focus:text-indigo-600">
+									<div class="flex items-center pl-5">
+										<p class="text-sm leading-none text-gray-700 mr-2">
+											How does YIVEWriter work
+										</p>
+									</div>
+								</td>
+								<td class="pl-24">
+									<div class="flex items-center">
+										<p
+											class="text-xs leading-none text-yellow-600 ml-2 px-2 py-1 rounded-lg bg-yellow-100"
+										>
+											Processing
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<a href="#" class="text-sm leading-none text-blue-600 ml-2"
+											>Arif</a
+										>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">20</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											Medium
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center justify-center">
+										<p class="text-lg leading-none text-green-400 ml-2">
+											<i class="fa-solid fa-circle-check"></i>
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											418.8ms
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											10 minutes ago
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<button
+										class="py-2 px-3 text-sm leading-none text-white bg-indigo-400 rounded focus:outline-none"
+									>
+										<!-- <i class="text-xs fa-sharp fa-solid fa-eye"></i>-->
+										Preview
+									</button>
+									<button
+										class="py-2 px-3 text-sm leading-none text-white bg-green-400 rounded focus:outline-none"
+									>
+										Download
+									</button>
+								</td>
+							</tr>
+							<tr class="h-3"></tr>
+							<tr
+								tabindex="0"
+								class="focus:outline-none h-16 border border-gray-100 rounded"
+							>
+								<td>
+									<div class="ml-5">
+										<p>64654</p>
+									</div>
+								</td>
+								<td class="focus:text-indigo-600">
+									<div class="flex items-center pl-5">
+										<p class="text-sm leading-none text-gray-700 mr-2">
+											Depression is a good thing
+										</p>
+									</div>
+								</td>
+								<td class="pl-24">
+									<div class="flex items-center">
+										<p
+											class="text-xs leading-none text-indigo-600 ml-2 px-2 py-1 rounded-lg bg-indigo-100"
+										>
+											New
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<a href="#" class="text-sm leading-none text-blue-600 ml-2"
+											>Faisal</a
+										>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">20</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">Short</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center justify-center">
+										<p class="text-lg leading-none text-green-400 ml-2">
+											<i class="fa-solid fa-circle-check"></i>
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											998.8ms
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											10 years ago
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<button
+										class="py-2 px-3 text-sm leading-none text-white bg-indigo-400 rounded focus:outline-none"
+									>
+										<!-- <i class="text-xs fa-sharp fa-solid fa-eye"></i>-->
+										Preview
+									</button>
+									<button
+										class="py-2 px-3 text-sm leading-none text-white bg-green-400 rounded focus:outline-none"
+									>
+										Download
+									</button>
+								</td>
+							</tr>
+							<tr class="h-3"></tr>
+							<tr
+								tabindex="0"
+								class="focus:outline-none h-16 border border-gray-100 rounded"
+							>
+								<td>
+									<div class="ml-5">
+										<p>64654</p>
+									</div>
+								</td>
+								<td class="focus:text-indigo-600">
+									<div class="flex items-center pl-5">
+										<p class="text-sm leading-none text-gray-700 mr-2">
+											I need money
+										</p>
+									</div>
+								</td>
+								<td class="pl-24">
+									<div class="flex items-center">
+										<p
+											class="text-xs leading-none text-green-600 ml-2 px-2 py-1 rounded-lg bg-green-100"
+										>
+											Success
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<a href="#" class="text-sm leading-none text-blue-600 ml-2"
+											>Marcus</a
+										>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">20</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											Very short
+										</p>
+									</div>
+								</td>
+								<td class="pl-5">
+									<div class="flex items-center justify-center">
+										<p class="text-lg leading-none text-red-500 ml-2">
+											<i class="fa-solid fa-circle-xmark"></i>
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											154.5ms
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<div class="flex items-center">
+										<p class="text-sm leading-none text-gray-600 ml-2">
+											50 seconds ago
+										</p>
+									</div>
+								</td>
+								<td class="pl-4">
+									<button
+										class="py-2 px-3 text-sm leading-none text-white bg-indigo-400 rounded focus:outline-none"
+									>
+										Preview
+									</button>
+									<button
+										class="py-2 px-3 text-sm leading-none text-white bg-green-400 rounded focus:outline-none"
+									>
+										Download
+									</button>
+								</td>
+							</tr>
+							<tr class="h-3"></tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<script src="./index.js"></script>
+		<style>
+			.checkbox:checked + .check-icon {
+				display: flex;
+			}
+		</style>
+		<script></script>
+	</body>
+</html>
