@@ -1,338 +1,363 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link href="/dist/output.css" rel="stylesheet" />
-		<!-- FA CDN -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-			integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
-		<script src="index.js"></script>
-	</head>
-	<body class="bg-gray-100 overflow-x-hidden laptop:overflow-y-scroll">
-		
-		
-		<!-- ONLY Take the model code from here. Main page is not fully responsive in this file. -->
-		<!-- Modal Start -->
-		<div class="absolute h-screen w-screen flex justify-center items-center">
-			<div class="border absolute w-[25%] laptop:w-[30%] wide-tablet:w-[40%] tablet:w-[50%] wide-mobile:w-[80%] mobile:w-[90%] h-auto bg-white z-20 py-4 px-5 rounded-md">
-				<div class="">
-					<h3 class="text-xl wide-mobile:text-lg">Feedback</h3>
-					<div class="flex justify-center items-center my-5">
-						<i class="thumb-down wide-mobile:text-5xl mirror fa-solid fa-thumbs-down"></i>
-					</div>
-					<h3 class="text-lg text-gray-600">Help us improve&nbsp;&nbsp;<span class="text-sm text-gray-500">(optional)</span></h3>
-					<div class="my-6 w-full">
-						<ul class="flex flex-wrap gap-3 wide-mobile:text-sm">
-							<li class="">
-								<input type="checkbox" id="not-accurate" value="" class="hidden peer" required="">
-								<label for="not-accurate" class="inline-flex justify-between items-center px-2 py-1 w-fit text-gray-500 bg-gray-50 rounded-lg border-2 border-gray-200 cursor-pointer  peer-checked:border-blue-600 hover:text-gray-700 peer-checked:text-gray-600 hover:bg-gray-100 ">                           
-									<div class="block">
-										
-										<div class="whitespace-nowrap w-full text-sm">Not accurate</div>
-									</div>
-								</label>
-							</li>
 
-							<li>
-								<input type="checkbox" id="not-relevant" value="" class="hidden peer" required="">
-								<label for="not-relevant" class="inline-flex justify-between items-center px-2 py-1 w-fit text-gray-500 bg-gray-50 rounded-lg border-2 border-gray-200 cursor-pointer  peer-checked:border-blue-600 hover:text-gray-700 peer-checked:text-gray-600 hover:bg-gray-100 ">                           
-									<div class="block">
-										
-										<div class="w-full text-sm whitespace-nowrap">Not relevant</div>
-									</div>
-								</label>
-							</li>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="/dist/output.css" rel="stylesheet" />
+	<!-- FA CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+		integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="index.js"></script>
+</head>
 
-							<li>
-								<input type="checkbox" id="lacks-details" value="" class="hidden peer" required="">
-								<label for="lacks-details" class="inline-flex justify-between items-center px-2 py-1 w-fit text-gray-500 bg-gray-50 rounded-lg border-2 border-gray-200 cursor-pointer  peer-checked:border-blue-600 hover:text-gray-700 peer-checked:text-gray-600 hover:bg-gray-100 ">                           
-									<div class="block">
-										
-										<div class="whitespace-nowrap w-full text-sm">Lacks details</div>
-									</div>
-								</label>
-							</li>
+<body class="bg-gray-100 overflow-x-hidden laptop:overflow-y-scroll">
 
-							<li>
-								<input type="checkbox" id="option-0" value="" class="hidden peer" required="">
-								<label for="option-0" class="inline-flex justify-between items-center px-2 py-1 w-fit text-gray-500 bg-gray-50 rounded-lg border-2 border-gray-200 cursor-pointer  peer-checked:border-blue-600 hover:text-gray-700 peer-checked:text-gray-600 hover:bg-gray-100 ">                           
-									<div class="block">
-										
-										<div class="whitespace-nowrap w-full text-sm">option 0</div>
-									</div>
-								</label>
-							</li>
 
-							<li>
-								<input type="checkbox" id="option-1" value="" class="hidden peer" required="">
-								<label for="option-1" class="inline-flex justify-between items-center px-2 py-1 w-fit text-gray-500 bg-gray-50 rounded-lg border-2 border-gray-200 cursor-pointer  peer-checked:border-blue-600 hover:text-gray-700 peer-checked:text-gray-600 hover:bg-gray-100 ">                           
-									<div class="block">
-										
-										<div class="whitespace-nowrap w-full text-sm">Option 1</div>
-									</div>
-								</label>
-							</li>
-						</ul>
-					</div>
-					
-					<textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  " placeholder="Your suggestions..."></textarea>
-					
-					<div class="w-full flex justify-between text-sm my-5 gap-3">
-						<button class="w-[50%] bg-white border py-2 text-gray-500 rounded-md hover:bg-gray-50 active:bg-gray-100 ease-in-out duration-200">Skip</button>
-						<input class="w-[50%] bg-[#1F57A6] py-2 text-white rounded-md cursor-pointer hover:bg-[#285fac] active:bg-[#3f74bd] ease-in-out duration-200" type="submit" name="" id="">
-					</div>
-				</div>
-			</div>	
-		</div>
-		
-		<!-- Modal End -->
-
+	<!-- ONLY Take the model code from here. Main page is not fully responsive in this file. -->
+	<!-- Modal Start -->
+	<div class="absolute h-screen w-screen flex justify-center items-center">
 		<div
-			class="blur w-screen h-auto bg-white px-32 tablet:px-10 wide-mobile:px-5 py-3 grid grid-cols-6 justify-between items-center drop-shadow-sm"
-		>
-			<!-- Logo -->
-			<div class="col-span-1 wide-tablet:col-span-3">
-				<img class="w-36" src="assets/YIVEWriter_logo.png" alt="" />
-			</div>
+			class="border absolute w-[25%] laptop:w-[30%] wide-tablet:w-[40%] tablet:w-[50%] wide-mobile:w-[80%] mobile:w-[90%] h-auto bg-white z-20 py-4 px-5 rounded-md">
+			<div class="">
+				<h3 class="text-xl wide-mobile:text-lg">Feedback</h3>
+				<div class="flex justify-center items-center my-5">
+					<i class="thumb-down wide-mobile:text-5xl mirror fa-solid fa-thumbs-down"></i>
+				</div>
+				<h3 class="text-lg text-gray-600">Help us improve&nbsp;&nbsp;<span
+						class="text-sm text-gray-500">(optional)</span></h3>
+				<div class="my-6 w-full">
+					<ul class="flex flex-wrap gap-3 wide-mobile:text-sm">
+						<li class="">
+							<input type="checkbox" id="not-accurate" value="" class="hidden peer" required="">
+							<label for="not-accurate"
+								class="inline-flex justify-between items-center px-2 py-1 w-fit text-gray-500 bg-gray-50 rounded-lg border-2 border-gray-200 cursor-pointer  peer-checked:border-blue-600 hover:text-gray-700 peer-checked:text-gray-600 hover:bg-gray-100 ">
+								<div class="block">
 
-			<!-- Navigation -->
-			<div
-				class="flex col-span-3 text-gray-700 gap-2 wide-tablet:hidden small-laptop:text-sm"
-			>
-				<a href="dashboard.html">
-					<div
-						class="w-32 small-laptop:w-24 active:bg-slate-100 bg-gray-100 px-10 py-1.5 rounded-md flex justify-center items-center gap-2 hover:bg-slate-100 ease-in-out duration-200"
-					>
-						<!-- <i class="fa-solid fa-table-columns"></i> -->
-						<p>Dashboard</p>
-					</div>
-				</a>
-				<a href="profile.html">
-					<div
-						class="w-32 small-laptop:w-24 active:bg-slate-100 px-10 py-1.5 rounded-md flex justify-center items-center gap-2 hover:bg-slate-100 ease-in-out duration-200"
-					>
-						<!-- <i class="fa-solid fa-user"></i> -->
-						<p>History</p>
-					</div>
-				</a>
-				<a href="#">
-					<div
-						class="w-32 active:bg-slate-100 px-10 py-1.5 rounded-md flex justify-center items-center gap-2 hover:bg-slate-100 ease-in-out duration-200"
-					>
-						<!-- <i class="fa-solid fa-ticket"></i> -->
-						<p>Tutorials</p>
-					</div>
-				</a>
-				<a href="#">
-					<div
-						class="w-32 active:bg-slate-100 px-10 py-1.5 rounded-md flex justify-center items-center gap-2 hover:bg-slate-100 ease-in-out duration-200"
-					>
-						<!-- <i class="fa-solid fa-ticket"></i> -->
-						<p>Ticket</p>
-					</div>
-				</a>
-			</div>
+									<div class="whitespace-nowrap w-full text-sm">Not accurate</div>
+								</div>
+							</label>
+						</li>
 
-			<!-- Profile -->
-			<div
-				class="flex gap-8 justify-end items-center col-span-2 wide-tablet:hidden"
-			>
+						<li>
+							<input type="checkbox" id="not-relevant" value="" class="hidden peer" required="">
+							<label for="not-relevant"
+								class="inline-flex justify-between items-center px-2 py-1 w-fit text-gray-500 bg-gray-50 rounded-lg border-2 border-gray-200 cursor-pointer  peer-checked:border-blue-600 hover:text-gray-700 peer-checked:text-gray-600 hover:bg-gray-100 ">
+								<div class="block">
+
+									<div class="w-full text-sm whitespace-nowrap">Not relevant</div>
+								</div>
+							</label>
+						</li>
+
+						<li>
+							<input type="checkbox" id="lacks-details" value="" class="hidden peer" required="">
+							<label for="lacks-details"
+								class="inline-flex justify-between items-center px-2 py-1 w-fit text-gray-500 bg-gray-50 rounded-lg border-2 border-gray-200 cursor-pointer  peer-checked:border-blue-600 hover:text-gray-700 peer-checked:text-gray-600 hover:bg-gray-100 ">
+								<div class="block">
+
+									<div class="whitespace-nowrap w-full text-sm">Lacks details</div>
+								</div>
+							</label>
+						</li>
+
+						<li>
+							<input type="checkbox" id="option-0" value="" class="hidden peer" required="">
+							<label for="option-0"
+								class="inline-flex justify-between items-center px-2 py-1 w-fit text-gray-500 bg-gray-50 rounded-lg border-2 border-gray-200 cursor-pointer  peer-checked:border-blue-600 hover:text-gray-700 peer-checked:text-gray-600 hover:bg-gray-100 ">
+								<div class="block">
+
+									<div class="whitespace-nowrap w-full text-sm">option 0</div>
+								</div>
+							</label>
+						</li>
+
+						<li>
+							<input type="checkbox" id="option-1" value="" class="hidden peer" required="">
+							<label for="option-1"
+								class="inline-flex justify-between items-center px-2 py-1 w-fit text-gray-500 bg-gray-50 rounded-lg border-2 border-gray-200 cursor-pointer  peer-checked:border-blue-600 hover:text-gray-700 peer-checked:text-gray-600 hover:bg-gray-100 ">
+								<div class="block">
+
+									<div class="whitespace-nowrap w-full text-sm">Option 1</div>
+								</div>
+							</label>
+						</li>
+					</ul>
+				</div>
+
+				<textarea id="message" rows="4"
+					class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  "
+					placeholder="Your suggestions..."></textarea>
+
+				<div class="w-full flex justify-between text-sm my-5 gap-3">
+					<button
+						class="w-[50%] bg-white border py-2 text-gray-500 rounded-md hover:bg-gray-50 active:bg-gray-100 ease-in-out duration-200">Skip</button>
+					<input
+						class="w-[50%] bg-[#1F57A6] py-2 text-white rounded-md cursor-pointer hover:bg-[#285fac] active:bg-[#3f74bd] ease-in-out duration-200"
+						type="submit" name="" id="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal End -->
+
+	<div
+		class="blur w-screen h-auto bg-white px-32 tablet:px-10 wide-mobile:px-5 py-3 grid grid-cols-6 justify-between items-center drop-shadow-sm">
+		<!-- Logo -->
+		<div class="col-span-1 wide-tablet:col-span-3">
+			<img class="w-36" src="assets/YIVEWriter_logo.png" alt="" />
+		</div>
+
+		<!-- Navigation -->
+		<div class="flex col-span-3 text-gray-700 gap-2 wide-tablet:hidden small-laptop:text-sm">
+			<a href="dashboard.html">
 				<div
-					class="col-span-1 flex justify-end items-center gap-5 small-laptop:gap-2"
-				>
-					<div
-						class="h-8 w-8 small-laptop:h-6 small-laptop:w-6 rounded-full border-2 border-blue-900 flex justify-center items-center"
-					>
-						<i
-							class="text-blue-900 text-xl small-laptop:text-sm fa-solid fa-dollar-sign"
-						></i>
-					</div>
-					<h3 class="text-gray-800 justify-end small-laptop:text-sm">
-						420,696
-					</h3>
+					class="w-32 small-laptop:w-24 active:bg-slate-100 bg-gray-100 px-10 py-1.5 rounded-md flex justify-center items-center gap-2 hover:bg-slate-100 ease-in-out duration-200">
+					<!-- <i class="fa-solid fa-table-columns"></i> -->
+					<p>Dashboard</p>
 				</div>
-				<div class="w-12 h-12 small-laptop:w-8 small-laptop:h-8">
-					<img
-						class="rounded-full border-2 border-blue-700"
-						src="assets/avatar.png"
-						alt="profile image"
-					/>
+			</a>
+			<a href="profile.html">
+				<div
+					class="w-32 small-laptop:w-24 active:bg-slate-100 px-10 py-1.5 rounded-md flex justify-center items-center gap-2 hover:bg-slate-100 ease-in-out duration-200">
+					<!-- <i class="fa-solid fa-user"></i> -->
+					<p>History</p>
 				</div>
-			</div>
-			<!-- Hamburger -->
-			<div
-				class="col-span-3 hidden wide-tablet:flex justify-end"
-				onclick="menuOn()"
-			>
-				<button class="px-5 py-2">
-					<i class="text-2xl fa-solid fa-bars"></i>
-				</button>
-			</div>
+			</a>
+			<a href="#">
+				<div
+					class="w-32 active:bg-slate-100 px-10 py-1.5 rounded-md flex justify-center items-center gap-2 hover:bg-slate-100 ease-in-out duration-200">
+					<!-- <i class="fa-solid fa-ticket"></i> -->
+					<p>Tutorials</p>
+				</div>
+			</a>
+			<a href="#">
+				<div
+					class="w-32 active:bg-slate-100 px-10 py-1.5 rounded-md flex justify-center items-center gap-2 hover:bg-slate-100 ease-in-out duration-200">
+					<!-- <i class="fa-solid fa-ticket"></i> -->
+					<p>Ticket</p>
+				</div>
+			</a>
 		</div>
 
-		<!-- Nav sidebar start -->
-		<div
-			class="blur z-10 wide-tablet:flex fixed top-0 w-60 right-[-250px] h-screen bg-white border drop-shadow-md ease-in-out duration-300"
-			id="nav"
-		>
-			<div class="flex flex-col justify-between text-gray-600">
-				<ul>
-					<li class="pl-5 pt-4">
-						<button onclick="menuOff()">
-							<i class="text-3xl fa-sharp fa-solid fa-xmark"></i>
-						</button>
+		<!-- Profile -->
+		<div class="flex gap-8 justify-end items-center col-span-2 wide-tablet:hidden">
+			<div class="col-span-1 flex justify-end items-center gap-5 small-laptop:gap-2">
+				<div
+					class="h-8 w-8 small-laptop:h-6 small-laptop:w-6 rounded-full border-2 border-blue-900 flex justify-center items-center">
+					<i class="text-blue-900 text-xl small-laptop:text-sm fa-solid fa-dollar-sign"></i>
+				</div>
+				<h3 class="text-gray-800 justify-end small-laptop:text-sm">
+					420,696
+				</h3>
+			</div>
+			<div class="w-12 h-12 small-laptop:w-8 small-laptop:h-8">
+				<img class="rounded-full border-2 border-blue-700" src="assets/avatar.png" alt="profile image" />
+			</div>
+		</div>
+		<!-- Hamburger -->
+		<div class="col-span-3 hidden wide-tablet:flex justify-end" onclick="menuOn()">
+			<button class="px-5 py-2">
+				<i class="text-2xl fa-solid fa-bars"></i>
+			</button>
+		</div>
+	</div>
+
+	<!-- Nav sidebar start -->
+	<div class="blur z-10 wide-tablet:flex fixed top-0 w-60 right-[-250px] h-screen bg-white border drop-shadow-md ease-in-out duration-300"
+		id="nav">
+		<div class="flex flex-col justify-between text-gray-600">
+			<ul>
+				<li class="pl-5 pt-4">
+					<button onclick="menuOff()">
+						<i class="text-3xl fa-sharp fa-solid fa-xmark"></i>
+					</button>
+				</li>
+				<div class="flex gap-2 pl-3 py-3 justify-start items-center col-span-2 border-b">
+					<div class="h-8 w-8 rounded-full border-2 border-blue-900 flex justify-center items-center">
+						<i class="text-blue-900 text-lg fa-solid fa-dollar-sign"></i>
+					</div>
+					<div>
+						<h3 class="text-lg ml-2 text-gray-600 justify-end">420,696</h3>
+					</div>
+				</div>
+				<a href="#">
+					<li class="w-60 px-5 py-3 flex gap-3 items-center hover:bg-slate-50">
+						<i class="fa-solid fa-table-columns"></i>
+						<p>Dashboard</p>
 					</li>
-					<div
-						class="flex gap-2 pl-3 py-3 justify-start items-center col-span-2 border-b"
-					>
-						<div
-							class="h-8 w-8 rounded-full border-2 border-blue-900 flex justify-center items-center"
-						>
-							<i class="text-blue-900 text-lg fa-solid fa-dollar-sign"></i>
-						</div>
-						<div>
-							<h3 class="text-lg ml-2 text-gray-600 justify-end">420,696</h3>
-						</div>
-					</div>
-					<a href="#"
-						><li
-							class="w-60 px-5 py-3 flex gap-3 items-center hover:bg-slate-50"
-						>
-							<i class="fa-solid fa-table-columns"></i>
-							<p>Dashboard</p>
-						</li></a
-					>
-					<a href="#"
-						><li
-							class="w-60 px-5 py-3 flex gap-3 items-center hover:bg-slate-50"
-						>
-							<i class="fa-solid fa-user"></i>
-							<p>History</p>
-						</li></a
-					>
-					<a href="#"
-						><li
-							class="w-60 px-5 py-3 flex gap-3 items-center hover:bg-slate-50"
-						>
-							<i class="fa-solid fa-ticket"></i>
-							<p>Tutorials</p>
-						</li></a
-					>
-					<a href="#"
-						><li
-							class="w-60 px-5 py-3 flex gap-3 items-center hover:bg-slate-50"
-						>
-							<i class="fa-solid fa-ticket"></i>
-							<p>Ticket</p>
-						</li></a
-					>
-				</ul>
-				<a
-					class="w-60 px-5 py-3 flex gap-3 items-center border-t hover:bg-slate-50"
-				>
-					<i class="fa-solid fa-right-from-bracket"></i>
-					<p>Logout</p>
 				</a>
-			</div>
+				<a href="#">
+					<li class="w-60 px-5 py-3 flex gap-3 items-center hover:bg-slate-50">
+						<i class="fa-solid fa-user"></i>
+						<p>History</p>
+					</li>
+				</a>
+				<a href="#">
+					<li class="w-60 px-5 py-3 flex gap-3 items-center hover:bg-slate-50">
+						<i class="fa-solid fa-ticket"></i>
+						<p>Tutorials</p>
+					</li>
+				</a>
+				<a href="#">
+					<li class="w-60 px-5 py-3 flex gap-3 items-center hover:bg-slate-50">
+						<i class="fa-solid fa-ticket"></i>
+						<p>Ticket</p>
+					</li>
+				</a>
+			</ul>
+			<a class="w-60 px-5 py-3 flex gap-3 items-center border-t hover:bg-slate-50">
+				<i class="fa-solid fa-right-from-bracket"></i>
+				<p>Logout</p>
+			</a>
 		</div>
-		<!-- Sidebar end -->
-		<!-- Header end -->
+	</div>
+	<!-- Sidebar end -->
+	<!-- Header end -->
 
-		<!--================================== Body container Start =============================-->
+	<!--================================== Body container Start =============================-->
 
-		<div class="blur flex justify-center items-center ">
-			<div class="bg-white rounded-lg w-[80%] h-auto my-5 py-10 px-[5%] drop-shadow-md">
-				<div class="flex justify-between">
-					<a
-						href="#"
-						class="text-gray-400 h-full py-2 px-4 rounded-md border border-gray-200 hover:bg-gray-100 active:bg-gray-200 transition ease-in-out"
-						><i class="fa-solid fa-chevron-left"></i> Go back</a
-					>
+	<div class="blur flex justify-center items-center ">
+		<div class="bg-white rounded-lg w-[80%] h-auto my-5 py-10 px-[5%] drop-shadow-md">
+			<div class="flex justify-between">
+				<a href="#"
+					class="text-gray-400 h-full py-2 px-4 rounded-md border border-gray-200 hover:bg-gray-100 active:bg-gray-200 transition ease-in-out"><i
+						class="fa-solid fa-chevron-left"></i> Go back</a>
 
-					<!-- buttons -->
-					<div class="flex justify-between items-center flex-wrap gap-10">
-						<!-- like - dislike -->
-						<div class="flex justify-between border border-gray-100 rounded-md">
-							<button
-								class="text-gray-400 px-4 py-2 hover:text-[#1F57A6] hover:bg-gray-100 active:bg-gray-200"
-							>
-								<i class=" fa-solid fa-thumbs-up"></i>
-							</button>
-							<span class="border border-gray-100"></span>
-							<button
-								class="text-gray-400 px-4 py-2 hover:bg-gray-100 hover:text-[#1F57A6] active:bg-gray-200"
-							>
-								<i class="mirror fa-solid fa-thumbs-down"></i>
-							</button>
-						</div>
-
-                        <!-- Copy -->
-						<div
-							class="border border-gray-100 rounded-md text-gray-400 px-4 py-2 hover:bg-gray-100 hover:text-[#1F57A6] active:bg-gray-200 cursor-pointer"
-                            onclick="copyAlert()"
-						>
-                            <p id="copybtnalert" class="">Copied to clipboard!</p>
-							<i class="fa-solid fa-clone"></i>
-
-						</div>
-					
-						<!-- Drop down -->
-                        <div class="relative inline-block text-left">
-                            <div onclick="toggleMenu()" class="select-none border border-gray-100 rounded-md text-gray-400 px-4 py-2 hover:bg-gray-100 hover:text-[#1F57A6] active:bg-gray-200 cursor-pointer">
-                                <button type="button" class="flex items-center text-gray-400 focus:outline-none " id="menu-button" aria-expanded="true" aria-haspopup="true"                                >
-                                    Actions &nbsp;<i class="fa-solid fa-ellipsis-vertical"></i>
-                                </button>
-                            </div>
-                        
-                            
-                            <div class="hidden absolute right-0 z-10 mt-2 w-56 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1"
-                            id="action-menu"
-                            >
-                                <div class="py-1" role="none">
-                                    <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0"><i class=" fa-sharp fa-solid fa-eye"></i>&nbsp;&nbsp;&nbsp;View</a>
-                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1"><i class="fa-sharp fa-solid fa-arrows-spin"></i>&nbsp;&nbsp;&nbsp;Spintax</a>
-                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2"><i class="fa-solid fa-arrow-down"></i>&nbsp;&nbsp;&nbsp;Download</a>
-                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-3"><i class="fa-solid fa-repeat"></i>&nbsp;&nbsp;&nbsp;Retry</a>
-                                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-4"><i class="fa-solid fa-pen"></i>&nbsp;&nbsp;&nbsp;Write again</a>
-                                    
-                                </div>
-                            </div>
-                        </div>
-  
-						</div>
+				<!-- buttons -->
+				<div class="flex justify-between items-center flex-wrap gap-10">
+					<!-- like - dislike -->
+					<div class="flex justify-between border border-gray-100 rounded-md">
+						<button
+							class="text-gray-400 px-4 py-2 hover:text-[#1F57A6] hover:bg-gray-100 active:bg-gray-200">
+							<i class=" fa-solid fa-thumbs-up"></i>
+						</button>
+						<span class="border border-gray-100"></span>
+						<button
+							class="text-gray-400 px-4 py-2 hover:bg-gray-100 hover:text-[#1F57A6] active:bg-gray-200">
+							<i class="mirror fa-solid fa-thumbs-down"></i>
+						</button>
 					</div>
 
-                    <!-- Content -->
-                    <div>
-                        <h1 class="my-5 text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, quibusdam?</h1>
-                        <p class="my-5 text-gray-400">Lorem ipsum dolor sit amet csciunt ratione et minima dolor animi quibusdam tenetur autem commodi esse quia iste praesentium ima placeat excepturi dolores quisquam consectetur enim obcaecati est quam dolor aliquam accusamus quaerat beatae nisi vel ipsum distinctio saepe cumque. Molestias laborum quidem rerum ullam quaerat laboriosam, repellendus enim! Animi suscipit reiciendis mollitia deleniti eum asperiores. Ea alias laboriosam sunt omnis sequi harum, enim hic? Esse vero odio ab perferendis accusamus consequuntur tempora sequi distinctio fuga atque corporis qui, repudiandae reprehenderit quae maxime nihil culpa rem commodi, dignissimos suscipit vitae. Impedit assumenda blanditiis fugiat. Ad minus ipsam consequatur. Nemo debitis fugit pariatur aliquid maiores laudantium dolorum necessitatibus, asperiores culpa perferendis. Velit, mollitia aspernatur nostrum, quo ipsum ducimus at dignissimos perspiciatis placeat, consequatur rerum numquam explicabo officia error molestias nobis quos? Illo iste animi, excepturi deleniti incidunt, omnis mollitia ipsum, corporis hic ad beatae! Iusto pariatur nam exercitationem aliquid unde error, fuga sed officiis iure similique magnam accusantium repellendus, reprehenderit aliquam laudantium nulla. Voluptates repudiandae iusto omnis nobis error cumque delectus recusandae quia hic quam quod doloremque tenetur, numquam quo?</p>
-                        <p class="my-5 text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eius, error possimus consequatur sint aliquam earum, officia saepe nesciunt ratione et minima dolor animi quibusdam tenetur autem commodi esse quia iste praesentium fuga exercitationem maiores ex? Soluta illum dolorum, in minima placeat excepturi dolores quisquam consectetur enim obcaecati est quam dolor aliquam accusamus quaerat beatae nisi vel ipsum distinctio saepe cumque. Molestias laborum quidem rerum ullam quaerat laboriosam, repellendus enim! Animi suscipit reiciendis mollitia deleniti eum asperiores. Ea alias laboriosam sunt omnis sequi harum, enim hic? Esse vero odio ab perferendis accusamus consequuntur tempora sequi distinctio fuga atque corporis qui, repudiandae reprehenderit quae maxime nihil culpa rem commodi, dignissimos suscipit vitae. Impedit assumenda blanditiis fugiat. Ad minus ipsam consequatur. Nemo debitis fugit pariatur aliquid maiores laudantium dolorum necessitatibus, asperiores culpa perferendis. Velit, mollitia aspernatur nostrum, quo ipsum ducimus at dignissimos perspiciatis placeat, consequatur rerum numquam explicabo officia error molestias nobis quos? Illo iste animi, excepturi deleniti incidunt, omnis mollitia ipsum, corporis hic ad beatae! Iusto pariatur nam exercitationem aliquid unde error, fuga sed officiis iure similique magnam accusantium repellendus, reprehenderit aliquam laudantium nulla. Voluptates repudiandae iusto omnis nobis error cumque delectus recusandae quia hic quam quod doloremque tenetur, numquam quo?</p>
-                        <p class="my-5 text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore electus recusandae quia hic quam quod doloremque tenetur, numquam quo?</p>
-                        <p class="my-5 text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eius, error possimus consequatur sint aliquam earum, officia praesentium fuga exercitationem maiores ex? Soluta illum dolorum, in minima placeat excepturi dolores quisquam consectetur enim obcaecati est quam dolor aliquam accusamus quaerat beatae nisi vel ipsum distinctio saepe cumque. Molestias laborum quidem rerum ullam quaerat laboriosam, repellendus enim! Animi suscipit reiciendis mollitia deleniti eum asperiores. Ea alias laboriosam sunt omnis sequi harum, enim hic? Esse vero odio ab perferendis accusamus consequuntur tempora sequi distinctio fuga atque corporis qui, repudiandae reprehenderit quae maxime nihil culpa rem commodi, dignissimos suscipit vitae. Impedit assumenda blanditiis fugiat. Ad minus ipsam consequatur. Nemo debitis fugit pariatur aliquid maiores laudantium dolorum necessitatibus, asperiores culpa perferendis. Velit, mollitia aspernatur nostrum, quo ipsum ducimus at dignissimos perspiciatis placeat, consequatur rerum numquam explicabo officia error molestias nobis quos? Illo iste animi, excepturi deleniti incidunt, omnis mollitia ipsum, corporis hic ad beatae! Iusto pariatur nam exercitationem aliquid unde error, fuga sed officiis iure similique magnam accusantium repellendus, reprehenderit aliquam laudantium nulla. Voluptates repudiandae iusto omnis nobis error cumque delectus recusandae quia hic quam quod doloremque tenetur, numquam quo?</p>
-                    </div>
-                    
-                    <!-- Footer -->
+					<!-- Copy -->
+					<div class="border border-gray-100 rounded-md text-gray-400 px-4 py-2 hover:bg-gray-100 hover:text-[#1F57A6] active:bg-gray-200 cursor-pointer"
+						onclick="copyAlert()">
+						<p id="copybtnalert" class="">Copied to clipboard!</p>
+						<i class="fa-solid fa-clone"></i>
 
-                    <div class="border-t border-gray-200 pt-10">
-                        <div class="text-gray-400 flex gap-14 text-sm">
-                            <p><span class="font-bold">Length</span> &nbsp;&nbsp;Medium</p>
-                            <p><span class="font-bold">Updated at</span> &nbsp;&nbsp;25-09-2022</p>
-                            <p><span class="font-bold">Processing time</span> &nbsp;&nbsp;257.8ms</p>
-                        </div>
-                    </div>
+					</div>
 
+					<!-- Drop down -->
+					<div class="relative inline-block text-left">
+						<div onclick="toggleMenu()"
+							class="select-none border border-gray-100 rounded-md text-gray-400 px-4 py-2 hover:bg-gray-100 hover:text-[#1F57A6] active:bg-gray-200 cursor-pointer">
+							<button type="button" class="flex items-center text-gray-400 focus:outline-none "
+								id="menu-button" aria-expanded="true" aria-haspopup="true">
+								Actions &nbsp;<i class="fa-solid fa-ellipsis-vertical"></i>
+							</button>
+						</div>
+
+
+						<div class="hidden absolute right-0 z-10 mt-2 w-56 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+							role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1"
+							id="action-menu">
+							<div class="py-1" role="none">
+								<!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+								<a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+									id="menu-item-0"><i class=" fa-sharp fa-solid fa-eye"></i>&nbsp;&nbsp;&nbsp;View</a>
+								<a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+									id="menu-item-1"><i
+										class="fa-sharp fa-solid fa-arrows-spin"></i>&nbsp;&nbsp;&nbsp;Spintax</a>
+								<a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+									id="menu-item-2"><i
+										class="fa-solid fa-arrow-down"></i>&nbsp;&nbsp;&nbsp;Download</a>
+								<a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+									id="menu-item-3"><i class="fa-solid fa-repeat"></i>&nbsp;&nbsp;&nbsp;Retry</a>
+								<a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+									id="menu-item-4"><i class="fa-solid fa-pen"></i>&nbsp;&nbsp;&nbsp;Write again</a>
+
+							</div>
+						</div>
+					</div>
 
 				</div>
 			</div>
-		</div>
 
-		<!-- Body container end -->
-	</body>
+			<!-- Content -->
+			<div>
+				<h1 class="my-5 text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, quibusdam?
+				</h1>
+				<p class="my-5 text-gray-400">Lorem ipsum dolor sit amet csciunt ratione et minima dolor animi quibusdam
+					tenetur autem commodi esse quia iste praesentium ima placeat excepturi dolores quisquam consectetur
+					enim obcaecati est quam dolor aliquam accusamus quaerat beatae nisi vel ipsum distinctio saepe
+					cumque. Molestias laborum quidem rerum ullam quaerat laboriosam, repellendus enim! Animi suscipit
+					reiciendis mollitia deleniti eum asperiores. Ea alias laboriosam sunt omnis sequi harum, enim hic?
+					Esse vero odio ab perferendis accusamus consequuntur tempora sequi distinctio fuga atque corporis
+					qui, repudiandae reprehenderit quae maxime nihil culpa rem commodi, dignissimos suscipit vitae.
+					Impedit assumenda blanditiis fugiat. Ad minus ipsam consequatur. Nemo debitis fugit pariatur aliquid
+					maiores laudantium dolorum necessitatibus, asperiores culpa perferendis. Velit, mollitia aspernatur
+					nostrum, quo ipsum ducimus at dignissimos perspiciatis placeat, consequatur rerum numquam explicabo
+					officia error molestias nobis quos? Illo iste animi, excepturi deleniti incidunt, omnis mollitia
+					ipsum, corporis hic ad beatae! Iusto pariatur nam exercitationem aliquid unde error, fuga sed
+					officiis iure similique magnam accusantium repellendus, reprehenderit aliquam laudantium nulla.
+					Voluptates repudiandae iusto omnis nobis error cumque delectus recusandae quia hic quam quod
+					doloremque tenetur, numquam quo?</p>
+				<p class="my-5 text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eius,
+					error possimus consequatur sint aliquam earum, officia saepe nesciunt ratione et minima dolor animi
+					quibusdam tenetur autem commodi esse quia iste praesentium fuga exercitationem maiores ex? Soluta
+					illum dolorum, in minima placeat excepturi dolores quisquam consectetur enim obcaecati est quam
+					dolor aliquam accusamus quaerat beatae nisi vel ipsum distinctio saepe cumque. Molestias laborum
+					quidem rerum ullam quaerat laboriosam, repellendus enim! Animi suscipit reiciendis mollitia deleniti
+					eum asperiores. Ea alias laboriosam sunt omnis sequi harum, enim hic? Esse vero odio ab perferendis
+					accusamus consequuntur tempora sequi distinctio fuga atque corporis qui, repudiandae reprehenderit
+					quae maxime nihil culpa rem commodi, dignissimos suscipit vitae. Impedit assumenda blanditiis
+					fugiat. Ad minus ipsam consequatur. Nemo debitis fugit pariatur aliquid maiores laudantium dolorum
+					necessitatibus, asperiores culpa perferendis. Velit, mollitia aspernatur nostrum, quo ipsum ducimus
+					at dignissimos perspiciatis placeat, consequatur rerum numquam explicabo officia error molestias
+					nobis quos? Illo iste animi, excepturi deleniti incidunt, omnis mollitia ipsum, corporis hic ad
+					beatae! Iusto pariatur nam exercitationem aliquid unde error, fuga sed officiis iure similique
+					magnam accusantium repellendus, reprehenderit aliquam laudantium nulla. Voluptates repudiandae iusto
+					omnis nobis error cumque delectus recusandae quia hic quam quod doloremque tenetur, numquam quo?</p>
+				<p class="my-5 text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore electus
+					recusandae quia hic quam quod doloremque tenetur, numquam quo?</p>
+				<p class="my-5 text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eius,
+					error possimus consequatur sint aliquam earum, officia praesentium fuga exercitationem maiores ex?
+					Soluta illum dolorum, in minima placeat excepturi dolores quisquam consectetur enim obcaecati est
+					quam dolor aliquam accusamus quaerat beatae nisi vel ipsum distinctio saepe cumque. Molestias
+					laborum quidem rerum ullam quaerat laboriosam, repellendus enim! Animi suscipit reiciendis mollitia
+					deleniti eum asperiores. Ea alias laboriosam sunt omnis sequi harum, enim hic? Esse vero odio ab
+					perferendis accusamus consequuntur tempora sequi distinctio fuga atque corporis qui, repudiandae
+					reprehenderit quae maxime nihil culpa rem commodi, dignissimos suscipit vitae. Impedit assumenda
+					blanditiis fugiat. Ad minus ipsam consequatur. Nemo debitis fugit pariatur aliquid maiores
+					laudantium dolorum necessitatibus, asperiores culpa perferendis. Velit, mollitia aspernatur nostrum,
+					quo ipsum ducimus at dignissimos perspiciatis placeat, consequatur rerum numquam explicabo officia
+					error molestias nobis quos? Illo iste animi, excepturi deleniti incidunt, omnis mollitia ipsum,
+					corporis hic ad beatae! Iusto pariatur nam exercitationem aliquid unde error, fuga sed officiis iure
+					similique magnam accusantium repellendus, reprehenderit aliquam laudantium nulla. Voluptates
+					repudiandae iusto omnis nobis error cumque delectus recusandae quia hic quam quod doloremque
+					tenetur, numquam quo?</p>
+			</div>
+
+			<!-- Footer -->
+
+			<div class="border-t border-gray-200 pt-10">
+				<div class="text-gray-400 flex gap-14 text-sm">
+					<p><span class="font-bold">Length</span> &nbsp;&nbsp;Medium</p>
+					<p><span class="font-bold">Updated at</span> &nbsp;&nbsp;25-09-2022</p>
+					<p><span class="font-bold">Processing time</span> &nbsp;&nbsp;257.8ms</p>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+	</div>
+
+	<!-- Body container end -->
+</body>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+	rel="stylesheet">
+
 </html>
