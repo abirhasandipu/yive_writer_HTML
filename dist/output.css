@@ -876,6 +876,10 @@ video {
   height: fit-content;
 }
 
+.h-52 {
+  height: 13rem;
+}
+
 .w-screen {
   width: 100vw;
 }
@@ -1010,6 +1014,10 @@ video {
   flex: 1 1 0%;
 }
 
+.shrink-0 {
+  flex-shrink: 0;
+}
+
 .grow {
   flex-grow: 1;
 }
@@ -1080,6 +1088,10 @@ video {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
 }
 
 .items-end {
@@ -1176,6 +1188,10 @@ video {
 
 .rounded {
   border-radius: 0.25rem;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
 }
 
 .border-2 {
@@ -1405,8 +1421,42 @@ video {
   background-color: rgb(79 70 229 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#D4F1F4\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 241 244 / var(--tw-bg-opacity));
+}
+
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'https\:\/\/images\.unsplash\.com\/photo-1446776653964-20c1d3a81b06\?ixlib\=rb-4\.0\.3\&ixid\=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8\&auto\=format\&fit\=crop\&w\=1471\&q\=80\'\)\] {
   background-image: url('https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80');
+}
+
+.bg-\[url\(\'https\:\/\/cdni\.iconscout\.com\/illustration\/premium\/thumb\/female-content-writer-5691576-4759508\.png\'\)\] {
+  background-image: url('https://cdni.iconscout.com/illustration/premium/thumb/female-content-writer-5691576-4759508.png');
+}
+
+.to-gray-800 {
+  --tw-gradient-to: #1f2937;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-contain {
+  background-size: contain;
+}
+
+.bg-right {
+  background-position: right;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 
 .fill-yellow-600 {
@@ -1654,6 +1704,10 @@ video {
 
 .font-extralight {
   font-weight: 200;
+}
+
+.font-normal {
+  font-weight: 400;
 }
 
 .leading-none {
@@ -2312,6 +2366,11 @@ body {
     grid-column: 1 / -1;
   }
 
+  .small-laptop\:mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
   .small-laptop\:h-6 {
     height: 1.5rem;
   }
@@ -2349,6 +2408,11 @@ body {
 @media (max-width: 1023.98px) {
   .wide-tablet\:col-span-3 {
     grid-column: span 3 / span 3;
+  }
+
+  .wide-tablet\:mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .wide-tablet\:flex {
