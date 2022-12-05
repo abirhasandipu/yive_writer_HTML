@@ -130,26 +130,27 @@
 	<!--================================== Body container Start =============================-->
 
 	<div class="flex flex-col gap-4 m-auto w-[90%] wide-mobile:w-[100%]">
-		<div class="grid grid-cols-3 mt-3 drop-shadow-md">
+		<div class="grid grid-cols-3 mt-3 drop-shadow-md wide-mobile:mx-2">
 
 
 			<!-- Banner -->
 			<div
-				class="flex justify-between h-56 wide-tablet:h-60 overflow-hidden relative col-span-2 mr-2 rounded-lg bg-gradient-to-r from-indigo-400 to-indigo-300">
-				<div class="px-14 my-10 z-10 flex-wrap">
+				class="flex justify-between h-56 wide-tablet:h-60 overflow-hidden relative col-span-2 wide-mobile:col-span-3 wide-mobile:mr-0 wide-mobile:mb-2 mobile:items-center mr-2 rounded-lg bg-gradient-to-r from-indigo-400 to-indigo-300">
+				<div class="px-14 mobile:px-6 my-10 z-10 flex-wrap">
 					<h3 class="text-white text-xl">Hi <span class="font-bold">Jack!</span>
 						What you want to write today?
 					</h3>
 					<div class="flex items-center justify-start mt-3 gap-2">
 						<img class="h-8" src="assets/bulb.png" alt="">
 						<p class="text-white text-xs whitespace-normal">
-							<span class="font-bold">Tips: </span> <br> Understanding the KPI of your writing
+							<span class="font-bold">Tips: </span> <br class="mobile:hidden"> Understanding the KPI of
+							your writing
 							is
 							important.
 							Find more tutorials here.</span>
 						</p>
 					</div>
-					<div class="mt-8">
+					<div class="mt-8 flex mobile:justify-center">
 						<a class="text-xs text-blue-400 py-2 px-3 bg-white rounded leading-3" href="#">Upgrade now</a>
 					</div>
 				</div>
@@ -163,7 +164,8 @@
 
 
 			<!-- Stats -->
-			<div class="col-span-1 ml-2 rounded-lg bg-gradient-to-r from-purple-400 to-indigo-400 overflow-hidden">
+			<div
+				class="col-span-1 wide-mobile:col-span-3 wide-mobile:ml-0 ml-2 rounded-lg bg-gradient-to-r from-purple-400 to-indigo-400 overflow-hidden">
 				<h3 class="text-white text-xl my-5 wide-tablet:mt-3 wide-tablet:mb-2 mx-5">Stats</h3>
 				<div class="flex relative">
 					<div class="flex z-10 wide-tablet:flex-col">
@@ -197,9 +199,9 @@
 
 		<!-- bottom section -->
 
-		<div class="grid grid-cols-3 gap-5 wide-tablet:grid-cols-1 mb-10">
+		<div class="grid grid-cols-3 gap-5 wide-tablet:grid-cols-1 mb-10 wide-mobile:mx-2">
 
-			<div class="col-span-2 grid grid-cols-3 gap-3">
+			<div class="col-span-2 grid grid-cols-3 wide-mobile:grid-cols-2 mobile:grid-cols-1 gap-3">
 				<div class="col-span-full">
 					<h3 class="text-gray-600 text-lg">Tools</h3>
 				</div>
@@ -211,13 +213,10 @@
 							popular
 						</p>
 					</div>
-					<h4 class="font-medium">Instant Article 2.0</h4>
-					<p class="text-xs font-light text-gray-500 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing
-						elit.
-						Possimus,
-						facilis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam consectetur eum
-						rem
-						repudiandae quaerat voluptatem recusandae asperiores quidem vitae magnam! lorem400</p>
+					<h4 class="font-medium">Instant article writer 2.0</h4>
+					<p class="text-xs font-light text-gray-500 mt-2">Generate up to 1200-word article with one click
+						instantly. All we need is your idea or topic.
+					</p>
 				</a>
 
 				<a href="createcontent.html"
@@ -228,49 +227,32 @@
 							new
 						</p>
 					</div>
-					<h4 class="font-medium">Youtube Title</h4>
-					<p class="text-xs font-light text-gray-500 mt-2">Lorem ipsum dolor sit amet consectetur
-						adipisicing
-						elit.
-						Possimus,
-						facilis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam consectetur eum
-						rem
-						repudiandae quaerat voluptatem recusandae asperiores quidem vitae magnam!</p>
+					<h4 class="font-medium">Youtube Video Title</h4>
+					<p class="text-xs font-light text-gray-500 mt-2">Increase more views and share with amazing video
+						titles.</p>
 				</a>
 
 				<a href="createcontent.html"
 					class="bg-white active:bg-gray-100 py-5 px-5 rounded-lg drop-shadow-md border border-gray-200 hover:border-indigo-300 transition-all ease-in-out hover:scale-[104%] origin-center duration-300">
 					<i class="text-red-500 text-2xl fa-brands fa-youtube"></i>
-					<h4 class="font-medium">Youtube Video Description</h4>
-					<p class="text-xs font-light text-gray-500 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing
-						elit.
-						Possimus,
-						facilis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam consectetur eum
-						rem
-						repudiandae quaerat voluptatem recusandae asperiores quidem vitae magnam!</p>
+					<h4 class="font-medium">Youtube Video Descriptions</h4>
+					<p class="text-xs font-light text-gray-500 mt-2">Create a captivating description to make your video
+						go viral and rank higher</p>
 				</a>
 
 				<a href="createcontent.html"
 					class="bg-white active:bg-gray-100 py-5 px-5 rounded-lg drop-shadow-md border border-gray-200 hover:border-indigo-300 transition-all ease-in-out hover:scale-[104%] origin-center duration-300">
 					<i class="text-yellow-400 text-2xl fa-brands fa-amazon"></i>
-					<h4 class="font-medium">Amazon Product Title</h4>
-					<p class="text-xs font-light text-gray-500 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing
-						elit.
-						Possimus,
-						facilis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam consectetur eum
-						rem
-						repudiandae quaerat voluptatem recusandae asperiores quidem vitae magnam!</p>
+					<h4 class="font-medium">Amazon Product Titles</h4>
+					<p class="text-xs font-light text-gray-500 mt-2">Create unique product titles that will help your
+						product stand out among other competitors</p>
 				</a>
 				<a href="createcontent.html"
 					class="bg-white active:bg-gray-100 py-5 px-5 rounded-lg drop-shadow-md border border-gray-200 hover:border-indigo-300 transition-all ease-in-out hover:scale-[104%] origin-center duration-300">
 					<i class="text-yellow-400 text-2xl fa-brands fa-amazon"></i>
 					<h4 class="font-medium">Amazon Product Description</h4>
-					<p class="text-xs font-light text-gray-500 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing
-						elit.
-						Possimus,
-						facilis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam consectetur eum
-						rem
-						repudiandae quaerat voluptatem recusandae asperiores quidem vitae magnam!</p>
+					<p class="text-xs font-light text-gray-500 mt-2">Instantly generate description for Amazon products
+						that appear on the first page of the search results.</p>
 				</a>
 				<a href="createcontent.html"
 					class="bg-white active:bg-gray-100 py-5 px-5 rounded-lg drop-shadow-md border border-gray-200 hover:border-indigo-300 transition-all ease-in-out hover:scale-[104%] origin-center duration-300">
@@ -278,10 +260,7 @@
 					<h4 class="font-medium">Product Description</h4>
 					<p class="text-xs font-light text-gray-500 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing
 						elit.
-						Possimus,
-						facilis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam consectetur eum
-						rem
-						repudiandae quaerat voluptatem recusandae asperiores quidem vitae magnam!</p>
+						Possimus</p>
 				</a>
 				<a href="createcontent.html"
 					class="bg-white active:bg-gray-100 py-5 px-5 rounded-lg drop-shadow-md border border-gray-200 hover:border-indigo-300 transition-all ease-in-out hover:scale-[104%] origin-center duration-300">
@@ -289,9 +268,7 @@
 					<h4 class="font-medium">PAA</h4>
 					<p class="text-xs font-light text-gray-500 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing
 						elit.
-						Possimus, olor sit amet consectetur adipisicing elit. Laboriosam consectetur eum
-						rem
-						repudiandae quaerat voluptatem recusandae asperiores quidem vitae magnam!</p>
+						Possimus, olor sit amet consectetur adipisicing elit.</p>
 				</a>
 
 			</div>
