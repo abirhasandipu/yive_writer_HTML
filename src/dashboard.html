@@ -201,15 +201,13 @@
 
 		<div class="grid grid-cols-3 gap-5 wide-tablet:grid-cols-1 mb-10 wide-mobile:mx-2">
 
-			<div class="col-span-2 grid grid-cols-3 wide-mobile:grid-cols-2 mobile:grid-cols-1 gap-3">
-				<div class="col-span-full flex justify-between items-center">
+			<div class="col-span-2">
+				<div class="flex justify-between min-h-12 pb-2 items-center gap-x-1.5">
 					<!-- filter -->
-					<div class=" text-xs font-light flex gap-3">
+					<div class="text-xs font-light flex gap-x-3 gap-y-1.5 items-center flex-wrap">
 
-						<!--/////////// Faisal vai //////////////-->
-						<!-- First item has different styles indicating that it is currently selected -->
-						<a class="bg-indigo-400 active:bg-indigo-500 text-white py-1 px-2 rounded-lg shadow-md border border-indigo-400 hover:border-indigo-300 transition-all ease-in-out"
-							href="#">All tools</a>
+						<a class=" max-h-16 bg-indigo-400 active:bg-indigo-500 text-white py-1 px-2 rounded-lg shadow-md border
+						border-indigo-400 hover:border-indigo-300 transition-all ease-in-out" href="#">All tools</a>
 						<a class="bg-white text-gray-600 active:bg-indigo-500 py-1 px-2 rounded-lg shadow-md border border-gray-100 hover:border-indigo-300 transition-all ease-in-out"
 							href="#">New</a>
 						<a class="bg-white text-gray-600 active:bg-indigo-500 py-1 px-2 rounded-lg shadow-md border border-gray-100 hover:border-indigo-300 transition-all ease-in-out"
@@ -228,80 +226,91 @@
 						<input class="py-2 px-4 rounded-full border text-xs font-light" placeholder="Search..."
 							type="text">
 					</div>
-
 				</div>
-				<a href="createcontent.html"
-					class="bg-white active:bg-gray-100 py-5 px-5 rounded-lg drop-shadow-md border border-gray-200 hover:border-indigo-300 transition-all ease-in-out hover:scale-[104%] origin-center duration-300">
-					<div class="flex items-center justify-between">
-						<i class="text-indigo-500 text-2xl fa-solid fa-robot mb-2"></i>
-						<p class="text-[10px] border border-sky-300 text-sky-300 px-2 py-1 rounded-full">
-							popular
-						</p>
-					</div>
-					<h4 class="font-medium">Instant article writer 2.0</h4>
-					<p class="text-xs font-light text-gray-500 mt-2">Generate up to 1200-word article with one click
-						instantly. All we need is your idea or topic.
-					</p>
-				</a>
 
-				<a href="createcontent.html"
-					class="bg-white active:bg-gray-100 py-5 px-5 rounded-lg drop-shadow-md border border-gray-200 hover:border-indigo-300 transition-all ease-in-out hover:scale-[104%] origin-center duration-300">
-					<div class="flex items-center justify-between">
+				<div class="col-span-3 grid grid-cols-3 wide-mobile:grid-cols-2 mobile:grid-cols-1 gap-3">
+
+
+					<!-- items -->
+					<a href="createcontent.html"
+						class="col-span-1 bg-white active:bg-gray-100 py-5 px-5 rounded-lg drop-shadow-md border border-gray-200 hover:border-indigo-300 transition-all ease-in-out hover:scale-[104%] origin-center duration-300">
+						<div class="flex items-center justify-between">
+							<i class="text-indigo-500 text-2xl fa-solid fa-robot mb-2"></i>
+							<p class="text-[10px] border border-sky-300 text-sky-300 px-2 py-1 rounded-full">
+								popular
+							</p>
+						</div>
+						<h4 class="font-medium">Instant article writer 2.0</h4>
+						<p class="text-xs font-light text-gray-500 mt-2">Generate up to 1200-word article with one click
+							instantly. All we need is your idea or topic.
+						</p>
+					</a>
+
+					<a href="createcontent.html"
+						class="col-span-1 bg-white active:bg-gray-100 py-5 px-5 rounded-lg drop-shadow-md border border-gray-200 hover:border-indigo-300 transition-all ease-in-out hover:scale-[104%] origin-center duration-300">
+						<div class="flex items-center justify-between">
+							<i class="text-red-500 text-2xl fa-brands fa-youtube mb-2"></i>
+							<p class="text-[10px] border border-green-300 text-green-300 px-2 py-1 rounded-full">
+								new
+							</p>
+						</div>
+						<h4 class="font-medium">Youtube Video Title</h4>
+						<p class="text-xs font-light text-gray-500 mt-2">Increase more views and share with amazing
+							video
+							titles.</p>
+					</a>
+
+					<a href="createcontent.html"
+						class="col-span-1 bg-white active:bg-gray-100 py-5 px-5 rounded-lg drop-shadow-md border border-gray-200 hover:border-indigo-300 transition-all ease-in-out hover:scale-[104%] origin-center duration-300">
 						<i class="text-red-500 text-2xl fa-brands fa-youtube mb-2"></i>
-						<p class="text-[10px] border border-green-300 text-green-300 px-2 py-1 rounded-full">
-							new
+						<h4 class="font-medium">Youtube Video Descriptions</h4>
+						<p class="text-xs font-light text-gray-500 mt-2">Create a captivating description to make your
+							video
+							go viral and rank higher</p>
+					</a>
+
+					<a href="createcontent.html"
+						class="col-span-1 bg-white active:bg-gray-100 py-5 px-5 rounded-lg drop-shadow-md border border-gray-200 hover:border-indigo-300 transition-all ease-in-out hover:scale-[104%] origin-center duration-300">
+						<i class="text-yellow-400 text-2xl fa-brands fa-amazon mb-2"></i>
+						<h4 class="font-medium">Amazon Product Titles</h4>
+						<p class="text-xs font-light text-gray-500 mt-2">Create unique product titles that will help
+							your
+							product stand out among other competitors</p>
+					</a>
+					<a href="createcontent.html"
+						class="col-span-1 bg-white active:bg-gray-100 py-5 px-5 rounded-lg drop-shadow-md border border-gray-200 hover:border-indigo-300 transition-all ease-in-out hover:scale-[104%] origin-center duration-300">
+						<i class="text-yellow-400 text-2xl fa-brands fa-amazon mb-2"></i>
+						<h4 class="font-medium">Amazon Product Description</h4>
+						<p class="text-xs font-light text-gray-500 mt-2">Instantly generate description for Amazon
+							products
+							that appear on the first page of the search results.</p>
+					</a>
+					<a href="createcontent.html"
+						class="col-span-1 bg-white active:bg-gray-100 py-5 px-5 rounded-lg drop-shadow-md border border-gray-200 hover:border-indigo-300 transition-all ease-in-out hover:scale-[104%] origin-center duration-300">
+						<i class="text-indigo-500 text-2xl fa-solid fa-cart-shopping mb-2"></i>
+						<h4 class="font-medium">Product Description</h4>
+						<p class="text-xs font-light text-gray-500 mt-2">Lorem ipsum dolor sit amet consectetur
+							adipisicing
+							elit.
+							Possimus</p>
+					</a>
+					<a href="createcontent.html"
+						class="col-span-1 bg-white active:bg-gray-100 py-5 px-5 rounded-lg drop-shadow-md border border-gray-200 hover:border-indigo-300 transition-all ease-in-out hover:scale-[104%] origin-center duration-300">
+						<i class="text-indigo-500 text-2xl fa-solid fa-clipboard-question mb-2"></i>
+						<h4 class="font-medium">PAA</h4>
+						<p class="text-xs font-light text-gray-500 mt-2">Ask a Question and generates an answer in
+							“People
+							Also Ask” (PAA) - style websites that Google loves.
+
 						</p>
-					</div>
-					<h4 class="font-medium">Youtube Video Title</h4>
-					<p class="text-xs font-light text-gray-500 mt-2">Increase more views and share with amazing video
-						titles.</p>
-				</a>
-
-				<a href="createcontent.html"
-					class="bg-white active:bg-gray-100 py-5 px-5 rounded-lg drop-shadow-md border border-gray-200 hover:border-indigo-300 transition-all ease-in-out hover:scale-[104%] origin-center duration-300">
-					<i class="text-red-500 text-2xl fa-brands fa-youtube mb-2"></i>
-					<h4 class="font-medium">Youtube Video Descriptions</h4>
-					<p class="text-xs font-light text-gray-500 mt-2">Create a captivating description to make your video
-						go viral and rank higher</p>
-				</a>
-
-				<a href="createcontent.html"
-					class="bg-white active:bg-gray-100 py-5 px-5 rounded-lg drop-shadow-md border border-gray-200 hover:border-indigo-300 transition-all ease-in-out hover:scale-[104%] origin-center duration-300">
-					<i class="text-yellow-400 text-2xl fa-brands fa-amazon mb-2"></i>
-					<h4 class="font-medium">Amazon Product Titles</h4>
-					<p class="text-xs font-light text-gray-500 mt-2">Create unique product titles that will help your
-						product stand out among other competitors</p>
-				</a>
-				<a href="createcontent.html"
-					class="bg-white active:bg-gray-100 py-5 px-5 rounded-lg drop-shadow-md border border-gray-200 hover:border-indigo-300 transition-all ease-in-out hover:scale-[104%] origin-center duration-300">
-					<i class="text-yellow-400 text-2xl fa-brands fa-amazon mb-2"></i>
-					<h4 class="font-medium">Amazon Product Description</h4>
-					<p class="text-xs font-light text-gray-500 mt-2">Instantly generate description for Amazon products
-						that appear on the first page of the search results.</p>
-				</a>
-				<a href="createcontent.html"
-					class="bg-white active:bg-gray-100 py-5 px-5 rounded-lg drop-shadow-md border border-gray-200 hover:border-indigo-300 transition-all ease-in-out hover:scale-[104%] origin-center duration-300">
-					<i class="text-indigo-500 text-2xl fa-solid fa-cart-shopping mb-2"></i>
-					<h4 class="font-medium">Product Description</h4>
-					<p class="text-xs font-light text-gray-500 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing
-						elit.
-						Possimus</p>
-				</a>
-				<a href="createcontent.html"
-					class="bg-white active:bg-gray-100 py-5 px-5 rounded-lg drop-shadow-md border border-gray-200 hover:border-indigo-300 transition-all ease-in-out hover:scale-[104%] origin-center duration-300">
-					<i class="text-indigo-500 text-2xl fa-solid fa-clipboard-question mb-2"></i>
-					<h4 class="font-medium">PAA</h4>
-					<p class="text-xs font-light text-gray-500 mt-2">Ask a Question and generates an answer in “People
-						Also Ask” (PAA) - style websites that Google loves.
-
-					</p>
-				</a>
+					</a>
+				</div>
 
 			</div>
 
 			<!-- history section -->
 			<div class="col-span-1">
-				<div class="col-span-1 mb-3 flex justify-between items-center">
+				<div class="col-span-1 flex justify-between items-center min-h-12 pb-2">
 					<h2 class="text-gray-600 text-lg">Recently created</h2>
 					<a class="text-xs py-1 px-2 bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white rounded-lg transition-all ease-in-out hover:scale-[104%] origin-center duration-300"
 						href="history.html">View all</a>
